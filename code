@@ -29,64 +29,53 @@
 		],
 		"description": "holder"
 	  },
-	                "LaTeX - mathrm": {
-						"scope": "",	
+	                "LaTeX - mathrm": {	
 						"prefix": "rm",	
 						"body": ["\\mathrm{$1} $0"]
 					},
-					"LaTeX - mathsf": {
-						"scope": "",	
+					"LaTeX - mathsf": {	
 						"prefix": "sf",	
 						"body": ["\\mathsf{$1} $0"]
 					},
-					"LaTeX - mathbf": {
-						"scope": "",	
+					"LaTeX - mathbf": {	
 						"prefix": "bf",	
 						"body": ["\\mathbf{$1} $0"]
 					},
                     "LaTeX - mathbb": {
-						"scope": "",
 						"prefix": "bb",
 						"body": ["\\mathbb{$1}$0"]
 					},
 					"LaTeX - mathcal": {
-						"scope": "",
 						"prefix": "ca",
 						"body": ["\\mathcal{$1}$0"]
 					},
                     "LaTeX - mathit": {
-						"scope": "",
 						"prefix": "it",
 						"body": ["\\mathit{$1}$0"]
 					},
 					"LaTeX - mathtt": {
-						"scope": "",
 						"prefix": "tt",
 						"body": ["\\mathtt{$1}$0"]
 					},
 					"LaTeX - inline math (dollars)": {
-						"scope": "",	
 						"prefix": "ii",	
 						"body": ["$$1$ $0"],
 						"description": "Create inline math formula"
 					},
 				
 					"LaTeX - display math (dollars)": {
-						"scope": "", 
 						"prefix": "dd", 
 						"body": ["$$ $1 $$$0"],
 						"description": "Create display math formula"
 					},
 				
-					"LaTeX - inline math with display style (dollars)": {
-						"scope": "",	
+					"LaTeX - inline math with display style (dollars)": {	
 						"prefix": "id",	
 						"body": ["$\\displaystyle $1$ $0"],
 						"description": "Create inline math formula with display style"
 					},
 
 					"LaTeX - display math (brackets)": {
-						"scope": "", 
 						"prefix": "DD", 
 						"body": ["\\[$1\\]$0"],
 						"description": "Create display math formula"
@@ -130,240 +119,157 @@
 					  },
 
 					"LaTeX - left": {
-						"scope": "",
 						"prefix": "lf",
 						"body": ["\\left"]
 					},
 					"LaTeX - right": {
-						"scope": "",
 						"prefix": "rt",
 						"body": ["\\right"]
 					},
 					"LaTeX - langle": {
-						"scope": "",
 						"prefix": "la",
 						"body": ["\\langle "]
 					},
 					"LaTeX - rangle": {
-						"scope": "",
 						"prefix": "ra",
 						"body": ["\\rangle "]
 					},
 					"LaTeX - lfloor": {
-						"scope": "",
 						"prefix": "lfl",
 						"body": ["\\lfloor "]
 					},
 					"LaTeX - rfloor": {
-						"scope": "",
 						"prefix": "rfl",
 						"body": ["\\rfloor "]
 					},
 					"LaTeX - lceil": {
-						"scope": "",
 						"prefix": "lce",
 						"body": ["\\lceil "]
 					},
 					"LaTeX - rceil": {
-						"scope": "",
 						"prefix": "rce",
 						"body": ["\\rceil "]
 					},
 					"LaTeX - ulcorner": {
-						"scope": "",
 						"prefix": "ulcor",
 						"body": ["\\ulcorner "]
 					},
 					"LaTeX - urcorner": {
-						"scope": "",
 						"prefix": "urcor",
 						"body": ["\\urcorner "]
 					},
 					"LaTeX - llcorner": {
-						"scope": "",
 						"prefix": "llcor",
 						"body": ["\\llcorner "]
 					},
 					"LaTeX - lrcorner": {
-						"scope": "",
 						"prefix": "lrcor",
 						"body": ["\\lrcorner "]
 					},
 				
 				    "LaTeX - quad": {
-						"scope": "",
 						"prefix": "qu",
 						"body": ["\\quad $0"]
 					},
 					"LaTeX - abs": {
-						"scope": "",
 						"prefix": "ab",
 						"body": ["\\left\\lvert $1 \\right\\rvert $0"]
 					},
 					"LaTeX - norm": {
-						"scope": "",
 						"prefix": "no",
 						"body": ["\\left\\lVert $1 \\right\\rVert $0"]
 					},
 					"LaTeX - lparenthesis + rparenthesis": {
-						"scope": "",
 						"prefix": "pa",
 						"body": ["\\left( $1 \\right) $0"]
 					},
-					"big pa": {
-						"prefix": "bigp",
-						"body": [
-						  "\\big($1 \\big)"
-						],
-						"description": "big pa"
-					  },
-					  "bigg pa": {
-						"prefix": "biggp",
-						"body": [
-						  "\\bigg($1 \\bigg)"
-						],
-						"description": "big pa"
-					  },
-					  "Big pa": {
-						"prefix": "Bigp",
-						"body": [
-						  "\\Big($1 \\Big)"
-						],
-						"description": "big pa"
-					  },
-					  "Bigg pa": {
-						"prefix": "Biggp",
-						"body": [
-						  "\\Bigg($1 \\Bigg)"
-						],
-						"description": "big pa"
-					  },
 					"LaTeX - lbracket + rbracket": {
-						"scope": "",
-						"prefix": "bra",
+						"prefix": "m",
 						"body": ["\\left[ $1 \\right] $0"]
 					},
 					"LaTeX - lcurlybracket + rcurlybracket": {
-						"scope": "",
 						"prefix": "cur",
 						"body": ["\\left\\{ $1 \\right\\\\} $0"]
 					},
-					"definition": {
-						"prefix": "def",
-						"body": [
-						  "\\triangleq $0"
-						],
-						"description": "definition"
-					  },
 					"LaTeX - langle + rangle": {
-						"scope": "",
-						"prefix": "lran",
+						"prefix": "a",
 						"body": ["\\left\\langle $1 \\right\\rangle $0"]
 					},
 					"LaTeX - inner product": {
-						"scope": "",
 						"prefix": "inn",
 						"body": ["\\left\\langle $1,$2 \\right\\rangle $0"]
 					},
 					"LaTeX - lfloor + rfloor": {
-						"scope": "",
 						"prefix": "lrfl",
 						"body": ["\\left\\lfloor $1 \\right\\rfloor $0"]
 					},
 					"LaTeX - lceil + rceil": {
-						"scope": "",
 						"prefix": "lrce",
 						"body": ["\\left\\lceil $1 \\right\\rceil $0"]
 					},
 					
 				
 					"LaTeX - infty (alias)": {
-						"scope": "",
-						"prefix": "oo",
+						"prefix": "inf",
 						"body": ["\\infty "]
 					},
 					"LaTeX - less than infty": {
-						"scope": "",
-						"prefix": "leoo",
-						"body": ["\\textless\\infty "]
+						"prefix": "leinf",
+						"body": ["\\<\\infty "]
 					},
 					"LaTeX - less than or equal to infty": {
-						"scope": "",
-						"prefix": "leqoo",
-						"body": ["\\leqslant\\infty "]
-					},
-					"LaTeX - less than zero": {
-						"scope": "",
-						"prefix": "leo",
-						"body": ["\\textless 0 "]
-					},
-					"LaTeX - greater than zero": {
-						"scope": "",
-						"prefix": "gtro",
-						"body": ["\\textgreater 0 "]
-					},
-					"LaTeX - less than or equal to zero": {
-						"scope": "",
-						"prefix": "leso",
-						"body": ["\\leqslant 0 "]
-					},
-					"LaTeX - greater than or equal to zero": {
-						"scope": "",
-						"prefix": "geso",
-						"body": ["\\geqslant 0 "]
+						"prefix": "leqinf",
+						"body": ["\\leq\\infty "]
 					},
 					"LaTeX - degree": {
-						"scope": "",
 						"prefix": "degr",
 						"body": ["^{\\circ} "]
 					},
 					"LaTeX - mathbb{R} (alias)": {
-						"scope": "",
 						"prefix": "R",
 						"body": ["\\mathbb{R} "]
 					},
 					"LaTeX - mathbb{Z} (alias)": {
-						"scope": "",
 						"prefix": "Z",
 						"body": ["\\mathbb{Z} "]
 					},
 					"LaTeX - mathbb{Q} (alias)": {
-						"scope": "",
 						"prefix": "Q",
 						"body": ["\\mathbb{Q} "]
 					},
 					"LaTeX - mathbb{N} (alias)": {
-						"scope": "",
 						"prefix": "N",
 						"body": ["\\mathbb{N} "]
 					},
 					"LaTeX - mathbb{C} (alias)": {
-						"scope": "",
 						"prefix": "C",
 						"body": ["\\mathbb{C} "]
 					},
 					"LaTeX - mathbb{K} (alias)": {
-						"scope": "",
 						"prefix": "K",
 						"body": ["\\mathbb{K} "]
 					},
 					"LaTeX - mathbb{M} (alias)": {
-						"scope": "",
 						"prefix": "M",
 						"body": ["\\mathbb{M} "]
 					},
 					"LaTeX - mathbb{S} (alias)": {
-						"scope": "",
 						"prefix": "S",
 						"body": ["\\mathbb{S} "]
 					},
+					"LaTeX - mathcal{F} (alias)": {
+						"prefix": "F",
+						"body": ["\\mathcal{F} "]
+					},
+					"LaTeX - mathcal{B} (alias)": {
+						"prefix": "B",
+						"body": ["\\mathcal{B}($0) "]
+					},
 					"LaTeX - Rightarrow (alias)": {
-						"scope": "",
 						"prefix": "imply",
 						"body": ["\\Rightarrow "]
 					},
 					"LaTeX - derivative (alias)": {
-						"scope": "",
 						"prefix": "deriv",
 						"body": ["\\dfrac{d${1:f}}{d${2:x}} $0"]
 					},
@@ -375,800 +281,627 @@
 						"description": "partial derivative"
 					  },
 					"LaTeX - partial derivative (alias)": {
-						"scope": "",
 						"prefix": "pderiv",
-						"body": ["\\dfrac{\\partial ${1:f}}{\\partial ${2:x}} $0"]recall
+						"body": ["\\dfrac{\\partial ${1:f}}{\\partial ${2:x}} $0"]
 					},
 					"LaTeX - align (alias)": {
-						"scope": "",
 						"prefix": "align",
 						"body": ["\\begin{${1|align,align*,aligned|}}","\t$2\\\\\\\\","\t$3\\\\\\\\$4","\\end{$1} $0"]
 					},
 				
 				
 					"LaTeX - frac": {
-						"scope": "",
 						"prefix": "frac",
 						"body": ["\\frac{$1}{$2} $0"]
 					},
 					"LaTeX - dfrac": {
-						"scope": "",
 						"prefix": "dfrac",
 						"body": ["\\dfrac{$1}{$2} $0"]
 					},
 					"LaTeX - tfrac": {
-						"scope": "",
 						"prefix": "tfrac",
 						"body": ["\\dfrac{$1}{$2} $0"]
 					},
 					"LaTeX - sqrt": {
-						"scope": "",
 						"prefix": "sqrt",
 						"body": ["\\sqrt{$1} $0"]
 					},
 				
 				
 					"LaTeX - alpha": {
-						"scope": "",
 						"prefix": "alpha",
 						"body": ["\\alpha "]
 					},
 					"LaTeX - beta": {
-						"scope": "",
 						"prefix": "beta",
 						"body": ["\\beta "]
 					},
 					"LaTeX - gamma": {
-						"scope": "",
 						"prefix": "gamma",
 						"body": ["\\gamma "]
 					},
 					"LaTeX - Gamma": {
-						"scope": "",
 						"prefix": "Gamma",
 						"body": ["\\Gamma "]
 					},
 				
 					"LaTeX - delta": {
-						"scope": "",
 						"prefix": "delta",
 						"body": ["\\delta "]
 					},
 					"LaTeX - Delta": {
-						"scope": "",
 						"prefix": "Delta",
 						"body": ["\\Delta "]
 					},
 					"LaTeX - epsilon": {
-						"scope": "",
 						"prefix": "epsilon",
 						"body": ["\\epsilon "]
 					},
 					"LaTeX - varepsilon": {
-						"scope": "",
 						"prefix": "ve",
 						"body": ["\\varepsilon "]
 					},
 					"LaTeX - zeta": {
-						"scope": "",
 						"prefix": "zeta",
 						"body": ["\\zeta "]
 					},
 					"LaTeX - eta": {
-						"scope": "",
 						"prefix": "eta",
 						"body": ["\\eta "]
 					},
 					"LaTeX - theta": {
-						"scope": "",
 						"prefix": "theta",
 						"body": ["\\theta "]
 					},
 					"LaTeX - Theta": {
-						"scope": "",
 						"prefix": "Theta",
 						"body": ["\\Theta "]
 					},
 					"LaTeX - vartheta": {
-						"scope": "",
 						"prefix": "vtheta",
 						"body": ["\\vartheta "]
 					},
 					"LaTeX - iota": {
-						"scope": "",
 						"prefix": "iota",
 						"body": ["\\iota "]
 					},
 					"LaTeX - kappa": {
-						"scope": "",
 						"prefix": "kappa",
 						"body": ["\\kappa "]
 					},
 					"LaTeX - lambda": {
-						"scope": "",
 						"prefix": "lambda",
 						"body": ["\\lambda "]
 					},
 					"LaTeX - Lambda": {
-						"scope": "",
 						"prefix": "Lambda",
 						"body": ["\\Lambda "]
 					},
 					"LaTeX - mu": {
-						"scope": "",
 						"prefix": "mu",
 						"body": ["\\mu "]
 					},
 					"LaTeX - nu": {
-						"scope": "",
 						"prefix": "nu",
 						"body": ["\\nu "]
 					},
 					"LaTeX - xi": {
-						"scope": "",
 						"prefix": "xi",
 						"body": ["\\xi "]
 					},
 					"LaTeX - Xi": {
-						"scope": "",
 						"prefix": "Xi",
 						"body": ["\\Xi "]
 					},
 					"LaTeX - pi": {
-						"scope": "",
 						"prefix": "pi",
 						"body": ["\\pi "]
 					},
 					"LaTeX - Pi": {
-						"scope": "",
 						"prefix": "Pi",
 						"body": ["\\Pi "]
 					},
 					"LaTeX - varpi": {
-						"scope": "",
 						"prefix": "varpi",
 						"body": ["\\vpi "]
 					},
 					"LaTeX - rho": {
-						"scope": "",
 						"prefix": "rho",
 						"body": ["\\rho "]
 					},
 					"LaTeX - varrho": {
-						"scope": "",
 						"prefix": "varrho",
 						"body": ["\\vrho "]
 					},
 					"LaTeX - sigma": {
-						"scope": "",
 						"prefix": "sigma",
 						"body": ["\\sigma "]
 					},
 					"LaTeX - Sigma": {
-						"scope": "",
 						"prefix": "Sigma",
 						"body": ["\\Sigma "]
 					},
 					"LaTeX - varsigma": {
-						"scope": "",
 						"prefix": "vsigma",
 						"body": ["\\varsigma "]
 					},
 					"LaTeX - tau": {
-						"scope": "",
 						"prefix": "tau",
 						"body": ["\\tau "]
 					},
 					"LaTeX - upsilon": {
-						"scope": "",
 						"prefix": "upsilon",
 						"body": ["\\upsilon "]
 					},
 					"LaTeX - Upsilon": {
-						"scope": "",
 						"prefix": "Upsilon",
 						"body": ["\\Upsilon "]
 					},
 					"LaTeX - phi": {
-						"scope": "",
 						"prefix": "phi",
 						"body": ["\\phi "]
 					},
 					"LaTeX - Phi": {
-						"scope": "",
 						"prefix": "Phi",
 						"body": ["\\Phi "]
 					},
 					"LaTeX - varphi": {
-						"scope": "",
 						"prefix": "varphi",
 						"body": ["\\varphi "]
 					},
 					"LaTeX - chi": {
-						"scope": "",
 						"prefix": "chi",
 						"body": ["\\chi "]
 					},
 					"LaTeX - psi": {
-						"scope": "",
 						"prefix": "psi",
 						"body": ["\\psi "]
 					},
 					"LaTeX - Psi": {
-						"scope": "",
 						"prefix": "Psi",
 						"body": ["\\Psi "]
 					},
 					"LaTeX - omega": {
-						"scope": "",
 						"prefix": "omega",
 						"body": ["\\omega "]
 					},
 					"LaTeX - Omega": {
-						"scope": "",
 						"prefix": "Omega",
 						"body": ["\\Omega "]
 					},
 					"LaTeX - digamma": {
-						"scope": "",
 						"prefix": "digamma",
 						"body": ["\\digamma "]
 					},
-					
-				
-				
 					"LaTeX - aleph": {
-						"scope": "",
 						"prefix": "aleph",
 						"body": ["\\aleph "]
 					},
 					"LaTeX - beth": {
-						"scope": "",
 						"prefix": "beth",
 						"body": ["\\beth "]
 					},
 					"LaTeX - gimel": {
-						"scope": "",
 						"prefix": "gimel",
 						"body": ["\\gimel "]
 					},
 					"LaTeX - daleth": {
-						"scope": "",
 						"prefix": "daleth",
 						"body": ["\\daleth "]
 					},
-				
-				
 					"limit": {
 						"prefix": "lims",
-						"body": [
-						"\\\\lim\\\\limits_{$1}^{$2} $3",
-									]
+						"body": ["\\\\lim\\\\limits_{$1}^{$2} $3",]
 								},
 						"sumit": {
 						"prefix": "ss",
-						"body": [
-						"\\\\sum\\\\limits_{$1}^{$2} $3",
-									]
+						"body": ["\\\\sum\\\\limits_{$1}^{$2} $3",]
 								},
 					"LaTeX - cup": {
-						"scope": "",
 						"prefix": "cup",
 						"body": ["\\cup "]
 					},
 					"LaTeX - cap": {
-						"scope": "",
 						"prefix": "cap",
 						"body": ["\\cap "]
 					},
-					"LaTeX - bigcup": {
-						"scope": "",
+					"LaTeX-bigcup": {
 						"prefix": "bcup",
 						"body": ["\\bigcup "]
 					},
-					"LaTeX - bigcap": {
-						"scope": "",
+					"LaTeX-bigcap": {
 						"prefix": "bcap",
 						"body": ["\\bigcap "]
 					},
 					"LaTeX - sqcup": {
-						"scope": "",
 						"prefix": "sqcup",
 						"body": ["\\sqcup "]
 					},
 					"LaTeX - sqcap": {
-						"scope": "",
 						"prefix": "sqcap",
 						"body": ["\\sqcap "]
 					},
 					"LaTeX - subset": {
-						"scope": "",
 						"prefix": "sbs",
 						"body": ["\\subset "]
 					},
 					"LaTeX - nsubset": {
-						"scope": "",
 						"prefix": "nsbs",
 						"body": ["\\not\\subset "]
 					},
 					"LaTeX - subseteq": {
-						"scope": "",
 						"prefix": "sbseq",
 						"body": ["\\subseteq "]
 					},
 					"LaTeX - nsubseteq": {
-						"scope": "",
 						"prefix": "nsbseq",
 						"body": ["\\not\\subseteq "]
 					},
 					"LaTeX - sqsubset": {
-						"scope": "",
 						"prefix": "sqsbs",
 						"body": ["\\sqsubset "]
 					},
 					"LaTeX - sqsubseteq": {
-						"scope": "",
 						"prefix": "sqsbseq",
 						"body": ["\\sqsubseteq "]
 					},
 					"LaTeX - sqsupset": {
-						"scope": "",
 						"prefix": "sqsps",
 						"body": ["\\sqsupset "]
 					},
 					"LaTeX - sqsupseteq": {
-						"scope": "",
 						"prefix": "sqspseq",
 						"body": ["\\sqsupseteq "]
 					},
 					"LaTeX - supset": {
-						"scope": "",
 						"prefix": "sps",
 						"body": ["\\supset "]
 					},
 					"LaTeX - nsupset": {
-						"scope": "",
 						"prefix": "nsps",
 						"body": ["\\not\\supset "]
 					},
 					"LaTeX - supseteq": {
-						"scope": "",
 						"prefix": "spseq",
 						"body": ["\\supseteq "]
 					},
 					"LaTeX - nsupseteq": {
-						"scope": "",
 						"prefix": "nspseq",
 						"body": ["\\not\\supseteq "]
 					},
 					"LaTeX - in": {
-						"scope": "",
 						"prefix": "in",
 						"body": ["\\in "]
 					},
 					"LaTeX - ni": {
-						"scope": "",
 						"prefix": "ni",
 						"body": ["\\ni "]
 					},
 					"LaTeX - nin": {
-						"scope": "",
 						"prefix": "nin",
 						"body": ["\\not\\in "]
 					},
 					"LaTeX - nni": {
-						"scope": "",
 						"prefix": "nni",
 						"body": ["\\not\\ni "]
 					},
 					"LaTeX - not": {
-						"scope": "",
 						"prefix": "not",
 						"body": ["\\not "]
 					},
 					"LaTeX - varnothing": {
-						"scope": "",
 						"prefix": "vnothing",
 						"body": ["\\varnothing "]
 					},
 					"LaTeX - emptyset": {
-						"scope": "",
 						"prefix": "emptyst",
 						"body": ["\\emptyset "]
 					},
 					"LaTeX - setminus": {
-						"scope": "",
 						"prefix": "stminus",
 						"body": ["\\setminus "]
 					},
 					"LaTeX - equiv": {
-						"scope": "",
 						"prefix": "equiv",
 						"body": ["\\equiv "]
 					},
 					"LaTeX - forall": {
-						"scope": "",
 						"prefix": "for",
 						"body": ["\\forall "]
 					},
 					"LaTeX - exists": {
-						"scope": "",
 						"prefix": "exi",
 						"body": ["\\exists "]
 					},
 					"LaTeX - nexists": {
-						"scope": "",
 						"prefix": "nexi",
 						"body": ["\\nexists "]
 					},
 					"LaTeX - therefore": {
-						"scope": "",
 						"prefix": "therefore",
 						"body": ["\\therefore "]
 					},
 					"LaTeX - because": {
-						"scope": "",
 						"prefix": "bcu",
 						"body": ["\\because "]
 					},
 					"LaTeX - neg": {
-						"scope": "",
 						"prefix": "neg",
 						"body": ["\\neg "]
 					},
 					"LaTeX - lnot": {
-						"scope": "",
 						"prefix": "lnot",
 						"body": ["\\lnot "]
 					},
 					"LaTeX - vee": {
-						"scope": "",
 						"prefix": "vee",
 						"body": ["\\vee "]
 					},
 					"LaTeX - lor": {
-						"scope": "",
 						"prefix": "lor",
 						"body": ["\\lor "]
 					},
 					"LaTeX - wedge": {
-						"scope": "",
 						"prefix": "wedge",
 						"body": ["\\wedge "]
 					},
 					"LaTeX - land": {
-						"scope": "",
 						"prefix": "land",
 						"body": ["\\land "]
 					},
 					"LaTeX - vdash": {
-						"scope": "",
 						"prefix": "vdash",
 						"body": ["\\vdash "]
 					},
 					"LaTeX - dashv": {
-						"scope": "",
 						"prefix": "dashv",
 						"body": ["\\dashv "]
 					},
 					"LaTeX - models": {
-						"scope": "",
 						"prefix": "models",
 						"body": ["\\models "]
 					},
-				
-				
-				
 					"LaTeX - acute": {
-						"scope": "",
 						"prefix": "acute",
 						"body": ["\\acute{$1}$0"]
 					},
 					"LaTeX - breve": {
-						"scope": "",
 						"prefix": "breve",
 						"body": ["\\breve{$1}$0"]
 					},
 					"LaTeX - check": {
-						"scope": "",
 						"prefix": "check",
 						"body": ["\\check{$1}$0"]
 					},
 					"LaTeX - mathring": {
-						"scope": "",
 						"prefix": "mathring",
 						"body": ["\\mathring{$1}$0"]
 					},
 					"LaTeX - grave": {
-						"scope": "",
 						"prefix": "grave",
 						"body": ["\\grave{$1}$0"]
 					},
 					"LaTeX - dot": {
-						"scope": "",
 						"prefix": "dot",
 						"body": ["\\dot{$1}$0"]
 					},
 					"LaTeX - ddot": {
-						"scope": "",
 						"prefix": "ddot",
 						"body": ["\\ddot{$1}$0"]
 					},
 					"LaTeX - hat": {
-						"scope": "",
 						"prefix": "hat",
 						"body": ["\\hat{$1}$0"]
 					},
 					"LaTeX - tilde": {
-						"scope": "",
 						"prefix": "tilde",
 						"body": ["\\tilde{$1}$0"]
 					},
 					"LaTeX - bar": {
-						"scope": "",
 						"prefix": "bar",
 						"body": ["\\bar{$1}$0"]
 					},
 					"LaTeX - vec": {
-						"scope": "",
 						"prefix": "vec",
 						"body": ["\\vec{$1}$0"]
 					},
-					"LaTeX - mathcal": {
-						"scope": "",
-						"prefix": "ca",
+					"LaTeX-mathcal": {
+						"prefix": "cal",
 						"body": ["\\mathcal{$1}$0"]
 					},
 					"LaTeX - mathfrak": {
-						"scope": "",
-						"prefix": "frk",
+						"prefix": "frak",
 						"body": ["\\mathfrak{$1}$0"]
 					},
 					"LaTeX - mathscr": {
-						"scope": "",
 						"prefix": "scr",
 						"body": ["\\mathscr{$1}$0"]
 					},
 					"LaTeX - overline": {
-						"scope": "",
 						"prefix": "oline",
 						"body": ["\\overline{$1}$0"]
 					},
 					"LaTeX - widehat": {
-						"scope": "",
 						"prefix": "wdhat",
 						"body": ["\\widehat{$1}$0"]
 					},
 					"LaTeX - widetilde": {
-						"scope": "",
 						"prefix": "wdtilde",
 						"body": ["\\widetilde{$1}$0"]
 					},
 					"LaTeX - overbrace": {
-						"scope": "",
 						"prefix": "obrace",
-						"body": ["\\overbrace{$1}^{$2}$0"]
+						"body": ["\\overbrace{$2}^{$1}\\,$3"]
 					},
-					"LaTeX - underbrace": {
-						"scope": "",
+					"LaTeX-underbrace": {
 						"prefix": "ubrace",
-						"body": ["\\underbrace{$1}_{$2}$0"]
+						"body": ["\\underbrace{$2}^{$1}\\,$3"]
 					},
 					"LaTeX - overset": {
-						"scope": "",
 						"prefix": "ost",
-						"body": ["\\overset{$2}{$1}$0"]
+						"body": ["\\overset{$2}{$1}\\,$3"]
 					},
 					"LaTeX - underbrace": {
-						"scope": "",
 						"prefix": "ust",
-						"body": ["\\underset{$2}{$1}$0"]
+						"body": ["\\underset{$2}{$1}\\,$3"]
 					},
-					
-				
-				
 					"LaTeX - sin": {
-						"scope": "",
 						"prefix": "sin",
 						"body": ["\\sin "]
 					},
 					"LaTeX - cos": {
-						"scope": "",
 						"prefix": "cos",
 						"body": ["\\cos "]
 					},
 					"LaTeX - tan": {
-						"scope": "",
 						"prefix": "tan",
 						"body": ["\\tan "]
 					},
 					"LaTeX - sec": {
-						"scope": "",
 						"prefix": "sec",
 						"body": ["\\sec "]
 					},
 					"LaTeX - csc": {
-						"scope": "",
 						"prefix": "csc",
 						"body": ["\\csc "]
 					},
 					"LaTeX - cot": {
-						"scope": "",
 						"prefix": "cot",
 						"body": ["\\cot "]
 					},
 					"LaTeX - exp": {
-						"scope": "",
 						"prefix": "exp",
 						"body": ["\\exp "]
 					},
 					"LaTeX - log": {
-						"scope": "",
 						"prefix": "log",
 						"body": ["\\log_{$1} $0"]
 					},
 					"LaTeX - ln": {
-						"scope": "",
 						"prefix": "ln",
 						"body": ["\\ln "]
 					},
 					"LaTeX - lg": {
-						"scope": "",
 						"prefix": "lg",
 						"body": ["\\lg "]
 					},
 					"LaTeX - sinh": {
-						"scope": "",
 						"prefix": "sinh",
 						"body": ["\\sinh "]
 					},
 					"LaTeX - cosh": {
-						"scope": "",
 						"prefix": "cosh",
 						"body": ["\\cosh "]
 					},
 					"LaTeX - tanh": {
-						"scope": "",
 						"prefix": "tanh",
 						"body": ["\\tanh "]
 					},
 					"LaTeX - coth": {
-						"scope": "",
 						"prefix": "coth",
 						"body": ["\\coth "]
 					},
 					"LaTeX - det": {
-						"scope": "",
 						"prefix": "det",
 						"body": ["\\det "]
 					},
 					"LaTeX - dim": {
-						"scope": "",
 						"prefix": "dim",
 						"body": ["\\dim "]
 					},
 					"LaTeX - ker": {
-						"scope": "",
 						"prefix": "ker",
 						"body": ["\\ker "]
 					},
 					"LaTeX - deg": {
-						"scope": "",
 						"prefix": "deg",
 						"body": ["\\deg "]
 					},
 					"LaTeX - arg": {
-						"scope": "",
 						"prefix": "arg",
 						"body": ["\\arg "]
 					},
 					"LaTeX - gcd": {
-						"scope": "",
 						"prefix": "gcd",
 						"body": ["\\gcd "]
 					},
 					"LaTeX - arcsin": {
-						"scope": "",
 						"prefix": "arcsin",
 						"body": ["\\arcsin "]
 					},
 					"LaTeX - arccos": {
-						"scope": "",
 						"prefix": "arccos",
 						"body": ["\\arccos "]
 					},
 					"LaTeX - arctan": {
-						"scope": "",
 						"prefix": "arctan",
 						"body": ["\\arctan "]
 					},
 					"LaTeX - arccsc": {
-						"scope": "",
 						"prefix": "arccsc",
 						"body": ["\\operatorname{arccsc} "]
 					},
 					"LaTeX - arcsec": {
-						"scope": "",
 						"prefix": "arcsec",
 						"body": ["\\operatorname{arcsec} "]
 					},
 					"LaTeX - arccot": {
-						"scope": "",
 						"prefix": "arccot",
 						"body": ["\\operatorname{arccot} "]
 					},
 					"LaTeX - arsinh": {
-						"scope": "",
 						"prefix": "arsinh",
 						"body": ["\\operatorname{arsinh} "]
 					},
 					"LaTeX - arcosh": {
-						"scope": "",
 						"prefix": "arcosh",
 						"body": ["\\operatorname{arcosh} "]
 					},
 					"LaTeX - artanh": {
-						"scope": "",
 						"prefix": "artanh",
 						"body": ["\\operatorname{artanh} "]
 					},
 					"LaTeX - csch": {
-						"scope": "",
 						"prefix": "csch",
 						"body": ["\\operatorname{csch} "]
 					},
 					"LaTeX - sech": {
-						"scope": "",
 						"prefix": "sech",
 						"body": ["\\operatorname{sech} "]
 					},
 					"LaTeX - arcsch": {
-						"scope": "",
 						"prefix": "arcsch",
 						"body": ["\\operatorname{arcsch} "]
 					},
 					"LaTeX - arsech": {
-						"scope": "",
 						"prefix": "arsech",
 						"body": ["\\operatorname{arsech} "]
 					},
 					"LaTeX - arcoth": {
-						"scope": "",
 						"prefix": "arcoth",
 						"body": ["\\operatorname{arcoth} "]
 					},
 					"LaTeX - min": {
-						"scope": "",
 						"prefix": "min",
 						"body": ["\\min "]
 					},
 					"LaTeX - max": {
-						"scope": "",
 						"prefix": "max",
 						"body": ["\\max "]
 					},
-					"LaTeX - inf": {
-						"scope": "",
-						"prefix": "inf",
-						"body": ["\\inf "]
-					},
 					"LaTeX - sup": {
-						"scope": "",
 						"prefix": "sup",
 						"body": ["\\sup "]
 					},
 					"LaTeX - liminf": {
-						"scope": "",
 						"prefix": "liminf",
 						"body": ["\\liminf "]
 					},
 					"LaTeX - limsup": {
-						"scope": "",
 						"prefix": "limsup",
 						"body": ["\\limsup "]
 					},
 					"LaTeX - lim": {
-						"scope": "",
 						"prefix": "lim",
 						"body": ["\\lim\\limits_{${1:x} \\to ${2:\\infty}} $0"]
 					},
@@ -1194,864 +927,707 @@
 						"description": "support"
 					  },
 					  "LaTeX - roman": {
-						"scope": "",
 						"prefix": "rom",
 						"body": ["\\romannumeral $1 $0"]
 					  },
 					 "LaTeX - Roman": {
-						"scope": "",
 						"prefix": "Rom",
 						"body": ["\\uppercase\\expandafter{\\romannumeral $1} $0"]
 					  },
-				  
-				
 					"LaTeX - leq": {
-						"scope": "",
 						"prefix": "leq",
 						"body": ["\\leq "]
 					},
 					"LaTeX - geq": {
-						"scope": "",
 						"prefix": "geq",
 						"body": ["\\geq "]
 					},
 					"LaTeX - neq": {
-						"scope": "",
 						"prefix": "neq",
 						"body": ["\\neq "]
 					},
 					"LaTeX - leqslant": {
-						"scope": "",
 						"prefix": "les",
 						"body": ["\\leqslant "]
 					},
 					"LaTeX - geqslant": {
-						"scope": "",
 						"prefix": "ges",
 						"body": ["\\geqslant "]
 					},
 					"LaTeX - ll": {
-						"scope": "",
 						"prefix": "ll",
 						"body": ["\\ll "]
 					},
 					"LaTeX - lll": {
-						"scope": "",
 						"prefix": "lll",
 						"body": ["\\lll "]
 					},
 					"LaTeX - gg": {
-						"scope": "",
 						"prefix": "gg",
 						"body": ["\\gg "]
 					},
 					"LaTeX - ggg": {
-						"scope": "",
 						"prefix": "ggg",
 						"body": ["\\ggg "]
 					},
 					"LaTeX - less": {
-						"scope": "",
 						"prefix": "less",
 						"body": ["\\textless "]
 					},
 					"LaTeX - nless": {
-						"scope": "",
 						"prefix": "nless",
 						"body": ["\\nless "]
 					},
 					"LaTeX - nleq": {
-						"scope": "",
 						"prefix": "nleq",
 						"body": ["\\nleq "]
 					},
 					"LaTeX - nleqslant": {
-						"scope": "",
 						"prefix": "nleqslant",
 						"body": ["\\nleqslant "]
 					},
 					"LaTeX - gtr": {
-						"scope": "",
 						"prefix": "gtr",
 						"body": ["\\textgreater "]
 					},
 					"LaTeX - ngtr": {
-						"scope": "",
 						"prefix": "ngtr",
 						"body": ["\\ngtr "]
 					},
 					"LaTeX - ngeq": {
-						"scope": "",
 						"prefix": "ngeq",
 						"body": ["\\ngeq "]
 					},
 					"LaTeX - ngeqslant": {
-						"scope": "",
 						"prefix": "ngeqslant",
 						"body": ["\\ngeqslant "]
 					},
 					"LaTeX - approx": {
-						"scope": "",
 						"prefix": "approx",
 						"body": ["\\approx "]
 					},
 					"LaTeX - asymp": {
-						"scope": "",
 						"prefix": "asymp",
 						"body": ["\\asymp "]
 					},
 					"LaTeX - prec": {
-						"scope": "",
 						"prefix": "prec",
 						"body": ["\\prec "]
 					},
 					"LaTeX - nprec": {
-						"scope": "",
 						"prefix": "nprec",
 						"body": ["\\nprec "]
 					},
 					"LaTeX - preceq": {
-						"scope": "",
 						"prefix": "preceq",
 						"body": ["\\preceq "]
 					},
 					"LaTeX - npreceq": {
-						"scope": "",
 						"prefix": "npreceq",
 						"body": ["\\npreceq "]
 					},
 					"LaTeX - succ": {
-						"scope": "",
 						"prefix": "succ",
 						"body": ["\\succ "]
 					},
 					"LaTeX - nsucc": {
-						"scope": "",
 						"prefix": "nsucc",
 						"body": ["\\nsucc "]
 					},
 					"LaTeX - succeq": {
-						"scope": "",
 						"prefix": "succeq",
 						"body": ["\\succeq "]
 					},
 					"LaTeX - nsucceq": {
-						"scope": "",
 						"prefix": "nsucceq",
 						"body": ["\\nsucceq "]
 					},
 					"LaTeX - propto": {
-						"scope": "",
 						"prefix": "propto",
 						"body": ["\\propto "]
 					},
 					"LaTeX - doteq": {
-						"scope": "",
 						"prefix": "doteq",
 						"body": ["\\doteq "]
 					},
-					"LaTeX - triangle": {
-						"scope": "",
+					"LaTeX-triangle": {
 						"prefix": "tra",
 						"body": ["\\triangle "]
 					},
 					"LaTeX - triangle": {
-						"scope": "",
 						"prefix": "lap",
 						"body": ["\\triangle "]
 					},
 					"LaTeX - triangleright": {
-						"scope": "",
 						"prefix": "traright",
 						"body": ["\\triangleright "]
 					},
 					"LaTeX - triangleleft": {
-						"scope": "",
 						"prefix": "traleft",
 						"body": ["\\triangleleft "]
 					},
 					"LaTeX - angle": {
-						"scope": "",
 						"prefix": "ang",
 						"body": ["\\angle "]
 					},
 					"LaTeX - measuredangle": {
-						"scope": "",
 						"prefix": "meaang",
 						"body": ["\\measuredangle "]
 					},
 					"LaTeX - ell": {
-						"scope": "",
 						"prefix": "ell",
 						"body": ["\\ell "]
 					},
 					"LaTeX - parallel": {
-						"scope": "",
 						"prefix": "parallel",
 						"body": ["\\parallel "]
 					},
 					"LaTeX - nparallel": {
-						"scope": "",
 						"prefix": "nparallel",
 						"body": ["\\nparallel "]
 					},
 					"LaTeX - bowtie": {
-						"scope": "",
 						"prefix": "bowtie",
 						"body": ["\\bowtie "]
 					},
 					"LaTeX - perp": {
-						"scope": "",
 						"prefix": "perp",
 						"body": ["\\perp "]
 					},
 					"LaTeX - notperp": {
-						"scope": "",
 						"prefix": "nperp",
 						"body": ["\\not\\perp "]
 					},
 					"LaTeX - smile": {
-						"scope": "",
 						"prefix": "smile",
 						"body": ["\\smile "]
 					},
 					"LaTeX - frown": {
-						"scope": "",
 						"prefix": "frown",
 						"body": ["\\frown "]
 					},
 					"LaTeX - circ": {
-						"scope": "",
 						"prefix": "circ",
 						"body": ["\\circ "]
 					},
 					"LaTeX - cong": {
-						"scope": "",
 						"prefix": "cong",
 						"body": ["\\cong "]
 					},
 					"LaTeX - ncong": {
-						"scope": "",
 						"prefix": "ncong",
 						"body": ["\\ncong "]
 					},
 					"LaTeX - sim": {
-						"scope": "",
 						"prefix": "sim",
 						"body": ["\\sim "]
 					},
 					"LaTeX - simeq": {
-						"scope": "",
 						"prefix": "simeq",
 						"body": ["\\simeq "]
 					},
 					"LaTeX - nsim": {
-						"scope": "",
 						"prefix": "nsim",
 						"body": ["\\nsim "]	
 					},
 					"LaTeX - nsimeq": {
-						"scope": "",
 						"prefix": "nsimeq",
 						"body": ["\\not\\simeq "]
 					},
 					"LaTeX - bullet": {
-						"scope": "",
 						"prefix": "bullet",
 						"body": ["\\bullet "]
 					},
 					"LaTeX - diamond": {
-						"scope": "",
 						"prefix": "diamond",
 						"body": ["\\diamond "]
 					},
 					"LaTeX - uplus": {
-						"scope": "",
 						"prefix": "uplus",
 						"body": ["\\uplus "]
 					},
 					"LaTeX - oplus": {
-						"scope": "",
 						"prefix": "oplus",
 						"body": ["\\oplus "]
 					},
 					"LaTeX - ominus": {
-						"scope": "",
 						"prefix": "ominus",
 						"body": ["\\ominus "]
 					},
 					"LaTeX - odot": {
-						"scope": "",
 						"prefix": "odot",
 						"body": ["\\odot "]
 					},
 					"LaTeX - otimes": {
-						"scope": "",
 						"prefix": "otimes",
 						"body": ["\\otimes "]
 					},
 					"LaTeX - oslash": {
-						"scope": "",
 						"prefix": "oslash",
 						"body": ["\\oslash "]
 					},
 					"LaTeX - upharpoonright": {
-						"scope": "",
 						"prefix": "upharpoonright",
 						"body": ["\\upharpoonright "]
 					},
 					"LaTeX - cdot": {
-						"scope": "",
 						"prefix": "cdot",
 						"body": ["\\cdot "]
 					},
 					"LaTeX - cdots": {
-						"scope": "",
 						"prefix": "cdots",
 						"body": ["\\cdots "]
 					},
 					"LaTeX - ldots": {
-						"scope": "",
 						"prefix": "ldots",
 						"body": ["\\ldots "]
 					},
 					"LaTeX - vdots": {
-						"scope": "",
 						"prefix": "vdots",
 						"body": ["\\vdots "]
 					},
 					"LaTeX - ddots": {
-						"scope": "",
 						"prefix": "ddots",
 						"body": ["\\ddots "]
 					},
 					"LaTeX - pm": {
-						"scope": "",
 						"prefix": "pm",
 						"body": ["\\pm "]
 					},
 					"LaTeX - mp": {
-						"scope": "",
 						"prefix": "mp",
 						"body": ["\\mp "]
 					},
 					"LaTeX - times": {
-						"scope": "",
 						"prefix": "times",
 						"body": ["\\times "]
 					},
 					"LaTeX - div": {
-						"scope": "",
 						"prefix": "div",
 						"body": ["\\div "]
 					},
 					"LaTeX - ast": {
-						"scope": "",
 						"prefix": "ast",
 						"body": ["\\ast "]
 					},
 					"LaTeX - mid": {
-						"scope": "",
 						"prefix": "mid",
 						"body": ["\\mid "]
 					},
 					"LaTeX - nmid": {
-						"scope": "",
 						"prefix": "nmid",
 						"body": ["\\nmid "]
 					},
 					"LaTeX - partial": {
-						"scope": "",
 						"prefix": "par",
 						"body": ["\\partial "]
 					},
 					"LaTeX - nabla": {
-						"scope": "",
 						"prefix": "nabla",
 						"body": ["\\nabla "]
 					},
 					"LaTeX - hbar": {
-						"scope": "",
 						"prefix": "hbar",
 						"body": ["\\hbar "]
 					},
 					"LaTeX - star": {
-						"scope": "",
 						"prefix": "star",
 						"body": ["\\star "]
 					},
 					"LaTeX - surd": {
-						"scope": "",
 						"prefix": "surd",
 						"body": ["\\surd "]
 					},
 					"LaTeX - checkmark": {
-						"scope": "",
 						"prefix": "checkmark",
 						"body": ["\\checkmark "]
 					},
 					"LaTeX - bigcirc": {
-						"scope": "",
 						"prefix": "bcirc",
 						"body": ["\\bigcirc "]
 					},
 					"LaTeX - amalg": {
-						"scope": "",
 						"prefix": "amalg",
 						"body": ["\\amalg "]
 					},
 					"LaTeX - bigtriangleup": {
-						"scope": "",
 						"prefix": "btrau",
 						"body": ["\\bigtriangleup "]
 					},
 					"LaTeX - bigtriangledown": {
-						"scope": "",
 						"prefix": "btrad",
 						"body": ["\\bigtriangledown "]
 					},
 					"LaTeX - dagger": {
-						"scope": "",
 						"prefix": "dag",
 						"body": ["\\dagger "]
 					},
 					"LaTeX - ddagger": {
-						"scope": "",
 						"prefix": "ddag",
 						"body": ["\\ddagger "]
 					},
 					"LaTeX - wr": {
-						"scope": "",
 						"prefix": "wr",
 						"body": ["\\wr "]
 					},
 					"LaTeX - wp": {
-						"scope": "",
 						"prefix": "wp",
 						"body": ["\\wp "]
 					},
 					"LaTeX - Re": {
-						"scope": "",
 						"prefix": "Re",
 						"body": ["\\Re "]
 					},
 					"LaTeX - Im": {
-						"scope": "",
 						"prefix": "Im",
 						"body": ["\\Im "]
 					},
 					"LaTeX - imath": {
-						"scope": "",
 						"prefix": "ima",
 						"body": ["\\imath "]
 					},
 					"LaTeX - jmath": {
-						"scope": "",
 						"prefix": "jma",
 						"body": ["\\jmath "]
 					},
 					"LaTeX - eth": {
-						"scope": "",
 						"prefix": "eth",
 						"body": ["\\eth "]
 					},
 					"inverse": {
 						"prefix": "iv",
-						"body": [
-						  "^{-1}"
-						],
+						"body": ["^{-1}"],
 						"description": "inverse"
-					  }.
+					  },
 					"prime": {
 						"prefix": "p",
-						"body": [
-						  "^{\\prime} $0"
-						],
+						"body": ["^{\\prime} $0"],
 						"description": "prime"
 					  },
 					  "double prime": {
 						"prefix": "pp",
-						"body": [
-						  "^{\\prime \\prime} $0"
-						],
+						"body": ["^{\\prime \\prime} $0"],
 						"description": "double prime"
 					  },  
 					"LaTeX - Box": {
-						"scope": "",
 						"prefix": "Box",
 						"body": ["\\Box "]
 					},
 					"LaTeX - bot": {
-						"scope": "",
 						"prefix": "bot",
 						"body": ["\\bot "]
 					},
 					"LaTeX - top": {
-						"scope": "",
 						"prefix": "top",
 						"body": ["\\top "]
 					},
 				
 				
 					"LaTeX - ss": {
-						"scope": "",
 						"prefix": "ss",
 						"body": ["\\sum\\limits_{$1}^{$2}$0"]
 					},
 					"LaTeX - pd": {
-						"scope": "",
 						"prefix": "pd",
 						"body": ["\\prod\\limits_{$1}^{$2}$0"]
 					},
 					"LaTeX - dif": {
-						"scope": "",
 						"prefix": "dif",
 						"body": ["\\mathop{}\\!\\mathrm{d}"]
 					},
 					"integral": {
-  "prefix": "int",
-  "body": [
-    "\\int "
-  ],
-  "description": "integral"
-},
-"LaTeX - fint": {
-	"scope": "",
-	"prefix": "fint",
-	"body": ["\\fint_{$1}$0"]
-},
+                        "prefix": "int",
+                        "body": ["\\int "],
+                        "description": "integral"
+                    },
+					"integral1": {
+                         "prefix": "int1",
+                         "body": ["\\mathop{\\mathlarger{\\int\\limits_{$1}}}$2"],
+                         "description": "integral"
+                    },
+                    "integral2": {
+                         "prefix": "int2",
+                         "body": ["\\mathop{\\mathlarger{\\mathlarger{\\int\\limits_{$1}}}}$2"],
+                         "description": "integral"
+                    },
+                    "integral3": {
+                         "prefix": "int3",
+                         "body": ["\\mathop{\\mathlarger{\\mathlarger{\\mathlarger{\\int\\limits_{$1}}}}}$2"],
+                         "description": "integral"
+                    },
+					"integral4": {
+                         "prefix": "int4",
+                         "body": ["\\mathop{\\mathlarger{\\mathlarger{\\mathlarger{\\mathlarger{\\int\\limits_{$1}}}}}}$2"],
+                         "description": "integral"
+                    },
+                    "LaTeX - fint": {
+	                    "prefix": "fint",
+	                    "body": ["\\fint_{$1}$0"]
+                    },
 					"LaTeX - int": {
-						"scope": "",
 						"prefix": "ints",
 						"body": ["\\int_{$1}^{$2}$0"]
 					},
 					"LaTeX - iint": {
-						"scope": "",
 						"prefix": "iint",
 						"body": ["\\iint_{$1}^{$2}$0"]
 					},
 					"LaTeX - iiint": {
-						"scope": "",
 						"prefix": "iiint",
 						"body": ["\\iiint_{$1}^{$2}$0"]
 					},
 					"LaTeX - oint": {
-						"scope": "",
 						"prefix": "oint",
 						"body": ["\\oint_{$1}^{$2}$0"]
 					},
 					"LaTeX - bigcup": {
-						"scope": "",
 						"prefix": "bcup",
-						"body": ["\\bigcup\\limits_{$1}^{$2}$0"]
+						"body": ["\\bigcup\\limits_{$1}^{$2}\\,$3"]
 					},
 					"LaTeX - bigcap": {
-						"scope": "",
 						"prefix": "bcap",
-						"body": ["\\bigcap\\limits_{$1}^{$2}$0"]
+						"body": ["\\bigcap\\limits_{$1}^{$2}\\,$3"]
 					},
 					"LaTeX - bigvee": {
-						"scope": "",
 						"prefix": "bvee",
-						"body": ["\\bigvee\\limits_{$1}^{$2}$0"]
+						"body": ["\\bigvee\\limits_{$1}^{$2}\\,$3"]
 					},
 					"LaTeX - bigwedge": {
-						"scope": "",
 						"prefix": "bwe",
-						"body": ["\\bigwedge\\limits_{$1}^{$2}$0"]
+						"body": ["\\bigwedge\\limits_{$1}^{$2}\\,$3"]
 					},
 					"LaTeX - coprod": {
-						"scope": "",
 						"prefix": "copd",
-						"body": ["\\coprod\\limits_{$1}^{$2}$0"]
+						"body": ["\\coprod\\limits_{$1}^{$2}\\,$3"]
 					},
 					"LaTeX - biguplus": {
-						"scope": "",
 						"prefix": "bup",
-						"body": ["\\biguplus\\limits_{$1}^{$2}$0"]
+						"body": ["\\biguplus\\limits_{$1}^{$2}\\,$3"]
 					},
 					"LaTeX - bigodot": {
-						"scope": "",
 						"prefix": "bod",
-						"body": ["\\bigodot\\limits_{$1}^{$2}$0"]
+						"body": ["\\bigodot\\limits_{$1}^{$2}\\,$3"]
 					},
 					"LaTeX - bigoplus": {
-						"scope": "",
 						"prefix": "bop",
-						"body": ["\\bigoplus\\limits_{$1}^{$2}$0"]
+						"body": ["\\bigoplus\\limits_{$1}^{$2}\\,$3"]
 					},
 					"LaTeX - bigotimes": {
-						"scope": "",
 						"prefix": "bot",
-						"body": ["\\bigotimes\\limits_{$1}^{$2}$0"]
+						"body": ["\\bigotimes\\limits_{$1}^{$2}\\,$3"]
 					},
 				
 				
 				    "LaTeX - to": {
-						"scope": "",
 						"prefix": "to",
 						"body": ["\\to "]
 					},
 					"LaTeX - leadsto": {
-						"scope": "",
 						"prefix": "leadsto",
 						"body": ["\\leadsto "]
 					},
 					"LaTeX - mapsto": {
-						"scope": "",
 						"prefix": "mpt",
 						"body": ["\\mapsto "]
 					},
 					"LaTeX - longmapsto": {
-						"scope": "",
 						"prefix": "longmpt",
 						"body": ["\\longmapsto "]
 					},
                     "LaTeX - weakly conv to": {
-						"scope": "",
 						"prefix": "wc",
 						"body": ["\\stackrel{\\mathrm{w}}{\\to} "]
 					},
 					"LaTeX - weakly star conv to": {
-						"scope": "",
 						"prefix": "wsc",
 						"body": ["\\stackrel{\\mathrm{w}^*}{\\to} "]
 					},
 					"LaTeX - iff": {
-						"scope": "",
 						"prefix": "if",
 						"body": ["\\iff "]
 					},
 					"LaTeX - implies": {
-						"scope": "",
 						"prefix": "im",
 						"body": ["\\implies "]
 					},
 					"LaTeX - gets": {
-						"scope": "",
 						"prefix": "gets",
 						"body": ["\\gets "]
 					},
 					"LaTeX - leftarrow": {
-						"scope": "",
 						"prefix": "lfa",
 						"body": ["\\leftarrow "]
 					},
-
 					"LaTeX - rightarrow": {
-						"scope": "",
 						"prefix": "rta",
 						"body": ["\\rightarrow "]
 					},
 					"LaTeX - nleftarrow": {
-						"scope": "",
 						"prefix": "nlfa",
 						"body": ["\\nleftarrow "]
 					},
 					"LaTeX - nrightarrow": {
-						"scope": "",
 						"prefix": "nrta",
 						"body": ["\\nrightarrow "]
 					},
 					"LaTeX - longleftarrow": {
-						"scope": "",
 						"prefix": "llfa",
 						"body": ["\\longleftarrow "]
 					},
 					"LaTeX - longrightarrow": {
-						"scope": "",
 						"prefix": "lrta",
 						"body": ["\\longrightarrow "]
 					},
 					"tend to": {
-						"prefix": "ct",
-						"body": [
-						  "\\stackrel{$1}{\\longrightarrow}"
-						],
+						"prefix": "tend",
+						"body": ["\\stackrel{$1}{\\longrightarrow}"],
 						"description": "tend to"
 					  },
 					  "weakly tend to": {
 						"prefix": "wct",
-						"body": [
-						  "\\stackrel{$1}{\\rightharpoonup }"
-						],
+						"body": ["\\stackrel{$1}{\\rightharpoonup }"],
 						"description": "weakly tend to"
 					  },
 					"LaTeX - Leftarrow": {
-						"scope": "",
 						"prefix": "Lfa",
 						"body": ["\\Leftarrow "]
 					},
 					"LaTeX - Rightarrow": {
-						"scope": "",
 						"prefix": "Rta",
 						"body": ["\\Rightarrow "]
 					},
 					"LaTeX - nLeftarrow": {
-						"scope": "",
 						"prefix": "nLfa",
 						"body": ["\\nLeftarrow "]
 					},
 					"LaTeX - nRightarrow": {
-						"scope": "",
 						"prefix": "nRta",
 						"body": ["\\nRightarrow "]
 					},
 					"LaTeX - Longleftarrow": {
-						"scope": "",
 						"prefix": "Longlfa",
 						"body": ["\\Longleftarrow "]
 					},
 					"LaTeX - Longrightarrow": {
-						"scope": "",
 						"prefix": "Longrta",
 						"body": ["\\Longrightarrow "]
 					},
 					"LaTeX - leftrightarrow": {
-						"scope": "",
 						"prefix": "lra",
 						"body": ["\\leftrightarrow "]
 					},
 					"LaTeX - Leftrightarrow": {
-						"scope": "",
 						"prefix": "LRa",
 						"body": ["\\Leftrightarrow "]
 					},
 					"LaTeX - longleftrightarrow": {
-						"scope": "",
 						"prefix": "longlra",
 						"body": ["\\longleftrightarrow "]
 					},
 					"LaTeX - Longleftrightarrow": {
-						"scope": "",
 						"prefix": "Longlra",
 						"body": ["\\Longleftrightarrow "]
 					},
 					"LaTeX - downarrow": {
-						"scope": "",
 						"prefix": "da",
 						"body": ["\\downarrow "]
 					},
 					"LaTeX - Downarrow": {
-						"scope": "",
 						"prefix": "Da",
 						"body": ["\\Downarrow "]
 					},
 					"LaTeX - uparrow": {
-						"scope": "",
 						"prefix": "ua",
 						"body": ["\\uparrow "]
 					},
 					"LaTeX - Uparrow": {
-						"scope": "",
 						"prefix": "Ua",
 						"body": ["\\Uparrow "]
 					},
 					"LaTeX - updownarrow": {
-						"scope": "",
 						"prefix": "uda",
 						"body": ["\\updownarrow "]
 					},
 					"LaTeX - Updownarrow": {
-						"scope": "",
 						"prefix": "UDa",
 						"body": ["\\Updownarrow "]
 					},
 					"LaTeX - hookleftarrow": {
-						"scope": "",
 						"prefix": "hklfa",
 						"body": ["\\hookleftarrow "]
 					},
 					"LaTeX - hookrightarrow": {
-						"scope": "",
 						"prefix": "hkrta",
 						"body": ["\\hookrightarrow "]
 					},
 					"LaTeX - leftharpoonup": {
-						"scope": "",
 						"prefix": "lfhpu",
 						"body": ["\\leftharpoonup "]
 					},
 					"LaTeX - rightharpoonup": {
-						"scope": "",
 						"prefix": "rthpu",
 						"body": ["\\rightharpoonup "]
 					},
 					"LaTeX - leftharpoondown": {
-						"scope": "",
 						"prefix": "lfhpd",
 						"body": ["\\leftharpoondown "]
 					},
 					"LaTeX - rightharpoondown": {
-						"scope": "",
 						"prefix": "rthpd",
 						"body": ["\\rightharpoondown "]
 					},
 					"LaTeX - rightleftharpoons": {
-						"scope": "",
 						"prefix": "lrhp",
 						"body": ["\\rightleftharpoons "]
 					},
 					"LaTeX - nearrow": {
-						"scope": "",
+
 						"prefix": "nea",
 						"body": ["\\nearrow "]
 					},
 					"LaTeX - searrow": {
-						"scope": "",
 						"prefix": "sea",
 						"body": ["\\searrow "]
 					},
 					"LaTeX - nwarrow": {
-						"scope": "",
 						"prefix": "nwa",
 						"body": ["\\nwarrow "]
 					},
 					"LaTeX - swarrow": {
-						"scope": "",
 						"prefix": "swa",
 						"body": ["\\swarrow "]
 					},
 					"LaTeX - overrightarrow": {
-						"scope": "",
 						"prefix": "orta",
 						"body": ["\\overrightarrow{$1}$0"]
 					},
 					"LaTeX - underrightarrow": {
-						"scope": "",
 						"prefix": "urta",
 						"body": ["\\underrightarrow{$1}$0"]
 					},
 					"LaTeX - overleftarrow": {
-						"scope": "",
 						"prefix": "olfa",
 						"body": ["\\overleftarrow{$1}$0"]
 					},
 					"LaTeX - underleftarrow": {
-						"scope": "",
 						"prefix": "ulfa",
 						"body": ["\\underleftarrow{$1}$0"]
 					},
 					"LaTeX - overleftrightarrow": {
-						"scope": "",
 						"prefix": "olra",
 						"body": ["\\overleftrightarrow{$1}$0"]
 					},
 					"LaTeX - underleftrightarrow": {
-						"scope": "",
 						"prefix": "ulra",
 						"body": ["\\underleftrightarrow{$1}$0"]
-					},
-					
-				        
+					},  
 					"begin": {
 						"prefix": "beg",
 						"body": [
-						"\\begin{${1|defi,thm,nthm,lemma,nlemma,prop,nprop,cor,ncor,claim,proof,ppt,rmk,eg,axiom,notation,assumption,conjecture,fact,question,ex,solution|}}","\t$2","\\end{$1} $0",
+						"\\begin{${1|definition,thm,nthm,lemma,nlemma,prop,nprop,cor,ncor,claim,proof,ppt,rmk,eg,axiom,notation,assumption,conjecture,fact,question,ex,solution|}}","\t$2","\\end{$1} $0",
 						],
 						"description": "begin"
 					  },
-
 					  "itemize": {
 						"prefix": "bit",
 						"body": [
@@ -2062,8 +1638,7 @@
 						],
 						"description": "itemize"
 					  },
-
-								"enumerate": {
+					"enumerate": {
 									"prefix": "ben",
 									"body": [
 									  "\\begin{enumerate}",
@@ -2074,7 +1649,29 @@
 									"description": "enumerate"
 								  },
 
-						"besplit": {
+                    "None": {
+                                    "prefix": "beni",
+                                    "body": [
+                                      "\\begin{enumerate}[label=(\\roman*)]",
+                                      "\\item $1   ",
+                                      "\\item ",
+                                      "\\end{enumerate}"
+                                      ],
+                                      "description": "None"
+                                },
+
+					"enumeratea": {
+									"prefix": "bena",
+									"body": [
+									  "\\begin{enumerate}[(a)]",
+									  "    \\item $1  ",
+									  "    \\item   ",
+									  "    \\end{enumerate} "
+									],
+									"description": "enumerate"
+								  },
+
+						"begsplit": {
 										"prefix": "besp",
 										"body": [
 										  "\\begin{equation}",
@@ -2101,61 +1698,42 @@
 										  ""
 										],
 										"description": "besplit"
-									  }
-                        "LaTeX - cases (alias)": {
-						"scope": "",
-						"prefix": "bcas",
-						"body": ["\\begin{cases}\n$1 & $2 \\text{$3}\\\\\\ \n$4 &$5 \\text{$6} \n\\end{cases} $0",
-					                ]
-					            },
-                        
+									  },
+                        "beg": {
+                        "prefix": "bcas",
+                        "body": ["\\begin{cases}\n$1 & $2 \\text{$3}\\\\\\ \n$4 &$5 \\text{$6} \n\\end{cases} $0",]
+                                },
 					    "be": {
 						"prefix": "beq",
-						"body": [
-						"\\begin{equation}\n$1\n \\end{equation} $0",
-									]
+						"body": ["\\begin{equation}\n$1\n \\end{equation} $0",]
 								},
 					   "bse": {
 						"prefix": "bseq",
-						"body": [
-						"\\begin{equation*}\n$1\n \\end{equation*} $0",
-									]
+						"body": ["\\begin{equation*}\n$1\n \\end{equation*} $0",]
 								},
 				        "bal": {
 						"prefix": "bal",
-						"body": [
-						"\\begin{align}\n$1\n \\end{align} $0",
-									]
+						"body": ["\\begin{align}\n$1\n \\end{align} $0",]
 								},
 					    "bsal": {
 						"prefix": "bsal",
-						"body": [
-						"\\begin{align*}\n$1\n \\end{align*} $0",
-									]
+						"body": ["\\begin{align*}\n$1\n \\end{align*} $0",]
 								},
 						"bga": {
 						"prefix": "bga",
-						"body": [
-						"\\begin{gather}\n$1\n \\end{gather} $0",
-									]
+						"body": ["\\begin{gather}\n$1\n \\end{gather} $0",]
 								},
 					    "bsga": {
 						"prefix": "bsga",
-						"body": [
-						"\\begin{gather*}\n$1\n \\end{gather*} $0",
-									]
+						"body": ["\\begin{gather*}\n$1\n \\end{gather*} $0",]
 								},	
 						"bml": {
 						"prefix": "bml",
-						"body": [
-						"\\begin{multiline}\n$1\n \\end{multiline} $0",
-									]
+						"body": ["\\begin{multiline}\n$1\n \\end{multiline} $0",]
 								},
 					    "bsml": {
 						"prefix": "bsml",
-						"body": [
-						"\\begin{multiline*}\n$1\n \\end{multiline*} $0",
-									]
+						"body": ["\\begin{multiline*}\n$1\n \\end{multiline*} $0",]
 								},		
 					    "matrix": {
 									"prefix": "bm",
@@ -2219,72 +1797,58 @@
 								  },
 
 					"LaTeX - text": {
-						"scope": "",
 						"prefix": "text",
 						"body": ["\\text{$1}$0"]
 					},
 					"LaTeX - textnormal": {
-						"scope": "",
 						"prefix": "fno",
 						"body": ["\\textnormal{$1}$0"]
 					},
 					"LaTeX - textrm": {
-						"scope": "",
 						"prefix": "frm",
 						"body": ["\\textrm{$1}$0"]
 					},
 					"LaTeX - emph": {
-                        "scope": "",
                         "prefix": "fem",
                         "body": ["\\emph{$1}$0"]
                     },
 					"LaTeX - textsf": {
-						"scope": "",
 						"prefix": "fsf",
 						"body": ["\\textsf{$1}$0"]
 					},
 					"LaTeX - texttt": {
-                        "scope": "",
                         "prefix": "ftt",
                         "body": ["\\texttt{$1}$0"]
                     },
 					"LaTeX - textit": {
-                        "scope": "",
                         "prefix": "fit",
                         "body": ["\\textit{$1}$0"]
                     },
 					"LaTeX - textsl": {
-						"scope": "",
 						"prefix": "fsl",
 						"body": ["\\textsl{$1}$0"]
 					},
 					"LaTeX - textsc": {
-                        "scope": "",
                         "prefix": "fsc",
                         "body": ["\\textsc{$1}$0"]
                     },
 					"LaTeX - textbf": {
-						"scope": "",
 						"prefix": "fbf",
 						"body": ["\\textbf{$1}$0"]
 					},
 					"LaTeX - mbox": {
-						"scope": "",
 						"prefix": "mbox",
 						"body": ["\\mbox{$1}$0"]
 					},
 					"LaTeX - operatorname": {
-						"scope": "",
 						"prefix": "ope",
 						"body": ["\\operatorname{$1}$0"]
 					},
 					"LaTeX - displaystyle ": {
-						"scope": "",
 						"prefix": "displaystyle ",
 						"body": ["\\displaystyle "]
 					},
 					"LaTeX - textbackslash ": {
-						"scope": "",
 						"prefix": "textbackslash ",
 						"body": ["\\textbackslash "]
 					},
