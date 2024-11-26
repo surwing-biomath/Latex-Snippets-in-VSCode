@@ -1,4 +1,674 @@
+{
+    // Place your snippets for LaTeX here. Each snippet is defined under a snippet name and has a prefix, body, and description.
+    // The prefix is what is used to trigger the snippet, and the body will be expanded and inserted.
+    // Possible variables are: $1, $2 for tab stops, $0 for the final cursor position, and ${1:label} for placeholders.
 
+    // Example:
+    // "Print to console": {
+    //     "prefix": "log",
+    //     "body": ["console.log('$1');", "$0"],
+    //     "description": "Log output to console"
+    // }
+
+    // --------------------------------------
+    // **Template Snippet**
+    // --------------------------------------
+
+    "Template": {
+        "prefix": ["template", "\\template"],
+        "body": [
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "\\documentclass{article}",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "\\usepackage{geometry}",
+            "\\usepackage{graphicx}",
+            "\\usepackage{empheq}",
+            "\\usepackage{mdframed}",
+            "\\usepackage{booktabs}",
+            "\\usepackage{lipsum}",
+            "\\usepackage{graphicx}",
+            "\\usepackage{color}",
+            "\\usepackage{psfrag}",
+            "\\usepackage{pgfplots}",
+            "\\usepackage{bm}",
+			"\\usepackage{amssymb}",
+            "\\usepackage{amsmath}",
+            "\\usepackage{amsthm}",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "",
+            "${3:% Other Settings}",
+            "",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "\\geometry{a4paper}",
+            "",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "\\definecolor{ocre}{RGB}{243,102,25}",
+            "\\definecolor{mygray}{RGB}{243,243,244}",
+            "\\definecolor{deepGreen}{RGB}{26,111,0}",
+            "\\definecolor{shallowGreen}{RGB}{235,255,255}",
+            "\\definecolor{deepBlue}{RGB}{61,124,222}",
+            "\\definecolor{shallowBlue}{RGB}{235,249,255}",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%",
+            "\\newcommand\\orangebox[1]{\\fcolorbox{ocre}{mygray}{\\hspace{1em}#1\\hspace{1em}}}",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "\\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\\normalfont}{0cm}{\\rmfamily\\bfseries}{}{1em}{{\\color{black}\\thmname{#1}~\\thmnumber{#2}}\\thmnote{\\,--\\,#3}}",
+            "\\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\\normalfont}{0cm}{\\rmfamily\\bfseries}{}{1em}{{\\color{black}\\thmname{#1}~\\thmnumber{#2}}\\thmnote{\\,--\\,#3}}",
+            "\\theoremstyle{mytheoremstyle}",
+            "\\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt]{theorem}{Theorem}[section]",
+            "\\theoremstyle{mytheoremstyle}",
+            "\\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt]{definition}{Definition}[section]",
+            "\\theoremstyle{myproblemstyle}",
+            "\\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt]{problem}{Problem}[section]",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "\\usepgfplotslibrary{colorbrewer}",
+            "\\pgfplotsset{width=8cm,compat=1.9}",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "\\title{${1:Title}}",
+            "\\author{${2:Author Name}}",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "",
+            "\\begin{document}",
+            "    \\maketitle",
+            "    $0",
+            "\\end{document}"
+        ],
+        "description": "Default LaTeX template with common packages and settings."
+    },
+
+    // --------------------------------------
+    // **Math Snippets**
+    // --------------------------------------
+
+    "Large Summation": {
+        "prefix": ["sumlarge", "\\sumlarge"],
+        "body": [
+            "\\displaystyle\\sum\\limits_{${1:i}=${2:1}}^{${3:n}} $0"
+        ],
+        "description": "Insert a large summation."
+    },
+
+    "Inline Summation": {
+        "prefix": ["suminline", "\\suminline"],
+        "body": [
+            "\\sum_{${1:i}=${2:1}}^{${3:n}} $0"
+        ],
+        "description": "Insert an inline summation."
+    },
+
+    "Inline Math": {
+        "prefix": ["mathinline", "\\mathinline"],
+        "body": [
+            "$${1}$$0"
+        ],
+        "description": "Insert inline math environment."
+    },
+
+    "Centered Math": {
+        "prefix": ["mathcentered", "\\mathcentered"],
+        "body": [
+            "\\[",
+            "    $0",
+            "\\]"
+        ],
+        "description": "Insert centered math environment."
+    },
+
+    // --------------------------------------
+    // **Sectioning Commands**
+    // --------------------------------------
+
+    "Section": {
+        "prefix": ["section", "\\section"],
+        "body": [
+            "\\section{${1:Section Title}}",
+            "$0"
+        ],
+        "description": "Insert a new section."
+    },
+
+    "Subsection": {
+        "prefix": ["subsection", "\\subsection"],
+        "body": [
+            "\\subsection{${1:Subsection Title}}",
+            "$0"
+        ],
+        "description": "Insert a new subsection."
+    },
+
+    "Header": {
+        "prefix": ["header", "\\header", "##"],
+        "body": [
+            "\\section*{${1:Header Title}}",
+            "$0"
+        ],
+        "description": "Insert an unnumbered section."
+    },
+
+    "Header Small": {
+        "prefix": ["headersmall", "\\headersmall", "###"],
+        "body": [
+            "\\subsection*{${1:Header Title}}",
+            "$0"
+        ],
+        "description": "Insert an unnumbered subsection."
+    },
+
+    // --------------------------------------
+    // **Integrals and Fractions**
+    // --------------------------------------
+
+    "Large Integral": {
+        "prefix": ["integrallarge", "\\integrallarge"],
+        "body": [
+            "\\displaystyle\\int_{${1:a}}^{${2:b}} $0"
+        ],
+        "description": "Insert a large integral."
+    },
+
+    "Inline Integral": {
+        "prefix": ["integralinline", "\\integralinline"],
+        "body": [
+            "\\int_{${1:a}}^{${2:b}} $0"
+        ],
+        "description": "Insert an inline integral."
+    },
+
+    "Inline Fraction": {
+        "prefix": ["fractioninline", "\\fractioninline"],
+        "body": [
+            "\\frac{${1:numerator}}{${2:denominator}}$0"
+        ],
+        "description": "Insert an inline fraction."
+    },
+
+    "Large Fraction": {
+        "prefix": ["fractionlarge", "\\fractionlarge"],
+        "body": [
+            "\\displaystyle\\frac{${1:numerator}}{${2:denominator}}$0"
+        ],
+        "description": "Insert a large fraction."
+    },
+
+    // --------------------------------------
+    // **Plotting with TikZ and PGFPlots**
+    // --------------------------------------
+
+    "Create 2D Plot Environment": {
+        "prefix": ["plotenvironment2d", "\\plotenvironment2d"],
+        "body": [
+            "\\begin{tikzpicture}",
+            "    \\begin{axis}[",
+            "        legend pos=outer north east,",
+            "        title={${1:Plot Title}},",
+            "        axis lines=${2|center,left,right,box|},",
+            "        xlabel={${3:x-axis label}},",
+            "        ylabel={${4:y-axis label}},",
+            "    ]",
+            "        $0",
+            "    \\end{axis}",
+            "\\end{tikzpicture}"
+        ],
+        "description": "Create a 2D plotting environment."
+    },
+
+    "Plot 2D Graph": {
+        "prefix": ["plotgraph2d", "\\plotgraph2d"],
+        "body": [
+            "\\addplot [",
+            "    domain=${1:-10}:${2:10},",
+            "    samples=${3:100},",
+            "    color=${4:blue},",
+            "]",
+            "    {${5:expression}};",
+            "\\addlegendentry{${6:Legend Entry}}",
+            "$0"
+        ],
+        "description": "Plot a 2D graph within a PGFPlots environment."
+    },
+
+    // Additional plotting snippets can be added similarly...
+
+// --------------------------------------
+// **Miscellaneous**
+// --------------------------------------
+
+    "Insert Problem Solving Index": {
+        "prefix": ["problemindex", "\\problemindex"],
+        "body": [
+            "\\noindent\\textbf{${1:Problem Index}}",
+            "$0"
+        ],
+        "description": "Insert a problem-solving index format."
+    },
+
+    "Insert Solution Notation": {
+        "prefix": ["solution", "\\solution"],
+        "body": [
+            "\\textit{Solution.}$0"
+        ],
+        "description": "Insert 'Solution' notation in italics."
+    },       
+	  "holder": {
+		"prefix": "Holder",
+		"body": [
+		  "H$\\ddot{\\mathrm{o}}\\$lder"
+		],
+		"description": "holder"
+	  },
+
+
+// --------------------------------------
+// **Math Symbols**
+// --------------------------------------
+
+// --------------------------------------
+// **Math Functions**
+// --------------------------------------
+
+
+"LaTeX - sin": {
+	"prefix": "sin",
+	"body": ["\\sin "]
+},
+"LaTeX - cos": {
+	"prefix": "cos",
+	"body": ["\\cos "]
+},
+"LaTeX - tan": {
+	"prefix": "tan",
+	"body": ["\\tan "]
+},
+"LaTeX - sec": {
+	"prefix": "sec",
+	"body": ["\\sec "]
+},
+"LaTeX - csc": {
+	"prefix": "csc",
+	"body": ["\\csc "]
+},
+"LaTeX - cot": {
+	"prefix": "cot",
+	"body": ["\\cot "]
+},
+"LaTeX - exp": {
+	"prefix": "exp",
+	"body": ["\\exp $0"]
+},
+"LaTeX - log": {
+	"prefix": "log",
+	"body": ["\\log_{$1} $0"]
+},
+"LaTeX - ln": {
+	"prefix": "ln",
+	"body": ["\\ln "]
+},
+"LaTeX - lg": {
+	"prefix": "lg",
+	"body": ["\\lg "]
+},
+"LaTeX - sinh": {
+	"prefix": "sinh",
+	"body": ["\\sinh "]
+},
+"LaTeX - cosh": {
+	"prefix": "cosh",
+	"body": ["\\cosh "]
+},
+"LaTeX - tanh": {
+	"prefix": "tanh",
+	"body": ["\\tanh "]
+},
+"LaTeX - coth": {
+	"prefix": "coth",
+	"body": ["\\coth "]
+},
+"LaTeX - det": {
+	"prefix": "det",
+	"body": ["\\det "]
+},
+"LaTeX - dim": {
+	"prefix": "dim",
+	"body": ["\\dim "]
+},
+"LaTeX - ker": {
+	"prefix": "ker",
+	"body": ["\\ker "]
+},
+"LaTeX - deg": {
+	"prefix": "deg",
+	"body": ["\\deg "]
+},
+"LaTeX - arg": {
+	"prefix": "arg",
+	"body": ["\\arg "]
+},
+"LaTeX - gcd": {
+	"prefix": "gcd",
+	"body": ["\\gcd "]
+},
+"LaTeX - arcsin": {
+	"prefix": "arcsin",
+	"body": ["\\arcsin "]
+},
+"LaTeX - arccos": {
+	"prefix": "arccos",
+	"body": ["\\arccos "]
+},
+"LaTeX - arctan": {
+	"prefix": "arctan",
+	"body": ["\\arctan "]
+},
+"LaTeX - arccsc": {
+	"prefix": "arccsc",
+	"body": ["\\operatorname{arccsc} "]
+},
+"LaTeX - arcsec": {
+	"prefix": "arcsec",
+	"body": ["\\operatorname{arcsec} "]
+},
+"LaTeX - arccot": {
+	"prefix": "arccot",
+	"body": ["\\operatorname{arccot} "]
+},
+"LaTeX - arsinh": {
+	"prefix": "arsinh",
+	"body": ["\\operatorname{arsinh} "]
+},
+"LaTeX - arcosh": {
+	"prefix": "arcosh",
+	"body": ["\\operatorname{arcosh} "]
+},
+"LaTeX - artanh": {
+	"prefix": "artanh",
+	"body": ["\\operatorname{artanh} "]
+},
+"LaTeX - csch": {
+	"prefix": "csch",
+	"body": ["\\operatorname{csch} "]
+},
+"LaTeX - sech": {
+	"prefix": "sech",
+	"body": ["\\operatorname{sech} "]
+},
+"LaTeX - arcsch": {
+	"prefix": "arcsch",
+    "body": ["\\operatorname{arcsch} "]
+},
+"LaTeX - arsech": {
+	"prefix": "arsech",
+	"body": ["\\operatorname{arsech} "]
+},
+"LaTeX - arcoth": {
+	"prefix": "arcoth",
+	"body": ["\\operatorname{arcoth} "]
+},
+
+// --------------------------------------
+// **Math Symbols**
+// --------------------------------------
+
+"infty": {
+	"prefix": "inf",
+	"body": ["\\infty "]
+},
+"degree": {
+	"prefix": "deg",
+	"body": ["^{\\circ} "]
+},
+"limit": {
+	"prefix": "lims",
+	"body": ["\\\\lim\\\\limits_{$1}^{$2} $3",]
+			},
+	"sumit": {
+	"prefix": "ss",
+	"body": ["\\\\sum\\\\limits_{$1}^{$2} $3",]
+			},
+"LaTeX - cup": {
+	"prefix": "cup",
+	"body": ["\\cup "]
+},
+"LaTeX - cap": {
+	"prefix": "cap",
+	"body": ["\\cap "]
+},
+"LaTeX-bigcup": {
+	"prefix": "bcup",
+	"body": ["\\bigcup "]
+},
+"LaTeX-bigcap": {
+	"prefix": "bcap",
+	"body": ["\\bigcap "]
+},
+"LaTeX - sqcup": {
+	"prefix": "sqcup",
+	"body": ["\\sqcup "]
+},
+"LaTeX - sqcap": {
+	"prefix": "sqcap",
+	"body": ["\\sqcap "]
+},
+"LaTeX - subset": {
+	"prefix": "sbs",
+	"body": ["\\subset "]
+},
+"LaTeX - nsubset": {
+	"prefix": "nsbs",
+	"body": ["\\not\\subset "]
+},
+"LaTeX - subseteq": {
+	"prefix": "sbseq",
+	"body": ["\\subseteq "]
+},
+"LaTeX - nsubseteq": {
+	"prefix": "nsbseq",
+	"body": ["\\not\\subseteq "]
+},
+"LaTeX - sqsubset": {
+	"prefix": "sqsbs",
+	"body": ["\\sqsubset "]
+},
+"LaTeX - sqsubseteq": {
+	"prefix": "sqsbseq",
+	"body": ["\\sqsubseteq "]
+},
+"LaTeX - sqsupset": {
+	"prefix": "sqsps",
+	"body": ["\\sqsupset "]
+},
+"LaTeX - sqsupseteq": {
+	"prefix": "sqspseq",
+	"body": ["\\sqsupseteq "]
+},
+"LaTeX - supset": {
+	"prefix": "sps",
+	"body": ["\\supset "]
+},
+"LaTeX - nsupset": {
+	"prefix": "nsps",
+	"body": ["\\not\\supset "]
+},
+"LaTeX - supseteq": {
+	"prefix": "spseq",
+	"body": ["\\supseteq "]
+},
+"LaTeX - nsupseteq": {
+	"prefix": "nspseq",
+	"body": ["\\not\\supseteq "]
+},
+"LaTeX - in": {
+	"prefix": "in",
+	"body": ["\\in "]
+},
+"LaTeX - ni": {
+	"prefix": "ni",
+	"body": ["\\ni "]
+},
+"LaTeX - nin": {
+	"prefix": "nin",
+	"body": ["\\not\\in "]
+},
+"LaTeX - nni": {
+	"prefix": "nni",
+	"body": ["\\not\\ni "]
+},
+"LaTeX - not": {
+	"prefix": "not",
+	"body": ["\\not "]
+},
+"LaTeX - varnothing": {
+	"prefix": "vnothing",
+	"body": ["\\varnothing "]
+},
+"LaTeX - emptyset": {
+	"prefix": "emptyst",
+	"body": ["\\emptyset "]
+},
+"LaTeX - setminus": {
+	"prefix": "stminus",
+	"body": ["\\setminus "]
+},
+"LaTeX - equiv": {
+	"prefix": "equiv",
+	"body": ["\\equiv "]
+},
+"LaTeX - forall": {
+	"prefix": "for",
+	"body": ["\\forall "]
+},
+"LaTeX - exists": {
+	"prefix": "exi",
+	"body": ["\\exists "]
+},
+"LaTeX - nexists": {
+	"prefix": "nexi",
+	"body": ["\\nexists "]
+},
+"LaTeX - therefore": {
+	"prefix": "therefore",
+	"body": ["\\therefore "]
+},
+"LaTeX - because": {
+	"prefix": "bcu",
+	"body": ["\\because "]
+},
+"LaTeX - neg": {
+	"prefix": "neg",
+	"body": ["\\neg "]
+},
+"LaTeX - lnot": {
+	"prefix": "lnot",
+	"body": ["\\lnot "]
+},
+"LaTeX - vee": {
+	"prefix": "vee",
+	"body": ["\\vee "]
+},
+"LaTeX - lor": {
+	"prefix": "lor",
+	"body": ["\\lor "]
+},
+"LaTeX - wedge": {
+	"prefix": "wedge",
+	"body": ["\\wedge "]
+},
+"LaTeX - land": {
+	"prefix": "land",
+	"body": ["\\land "]
+},
+"LaTeX - vdash": {
+	"prefix": "vdash",
+	"body": ["\\vdash "]
+},
+"LaTeX - dashv": {
+	"prefix": "dashv",
+	"body": ["\\dashv "]
+},
+"LaTeX - models": {
+	"prefix": "models",
+	"body": ["\\models "]
+},
+"LaTeX - acute": {
+	"prefix": "acute",
+	"body": ["\\acute{$1}$0"]
+},
+"LaTeX - breve": {
+	"prefix": "breve",
+	"body": ["\\breve{$1}$0"]
+},
+"LaTeX - check": {
+	"prefix": "check",
+	"body": ["\\check{$1}$0"]
+},
+"LaTeX - mathring": {
+	"prefix": "mathring",
+	"body": ["\\mathring{$1}$0"]
+},
+"LaTeX - grave": {
+	"prefix": "grave",
+	"body": ["\\grave{$1}$0"]
+},
+"LaTeX - dot": {
+	"prefix": "dot",
+	"body": ["\\dot{$1}$0"]
+},
+"LaTeX - ddot": {
+	"prefix": "ddot",
+	"body": ["\\ddot{$1}$0"]
+},
+"LaTeX - hat": {
+	"prefix": "hat",
+	"body": ["\\hat{$1}$0"]
+},
+"LaTeX - tilde": {
+	"prefix": "tilde",
+	"body": ["\\tilde{$1}$0"]
+},
+"LaTeX - bar": {
+	"prefix": "bar",
+	"body": ["\\bar{$1}$0"]
+},
+"LaTeX - vec": {
+	"prefix": "vec",
+	"body": ["\\vec{$1}$0"]
+},
+"LaTeX - overline": {
+	"prefix": "oline",
+	"body": ["\\overline{$1}$0"]
+},
+"LaTeX - widehat": {
+	"prefix": "wdhat",
+	"body": ["\\widehat{$1}$0"]
+},
+"LaTeX - widetilde": {
+	"prefix": "wdtilde",
+	"body": ["\\widetilde{$1}$0"]
+},
+"LaTeX - overbrace": {
+	"prefix": "obrace",
+	"body": ["\\overbrace{$2}^{$1}\\,$3"]
+},
+"LaTeX-underbrace": {
+	"prefix": "ubrace",
+	"body": ["\\underbrace{$2}^{$1}\\,$3"]
+},
+"LaTeX - overset": {
+	"prefix": "ost",
+	"body": ["\\overset{$2}{$1}\\,$3"]
+},
+"LaTeX - underbrace": {
+	"prefix": "ust",
+	"body": ["\\underset{$2}{$1}\\,$3"]
+},
 "LaTeX - min": {
 	"prefix": "min",
 	"body": ["\\min "]
@@ -67,3 +737,1347 @@
 	"prefix": "ggg",
 	"body": ["\\ggg "]
 },
+
+// --------------------------------------
+// **Math Symbols**
+// --------------------------------------
+
+"LaTeX - mathbb{R} (alias)": {
+	"prefix": "R",
+	"body": ["\\mathbb{R} "]
+},
+"LaTeX - mathbb{Z} (alias)": {
+	"prefix": "Z",
+	"body": ["\\mathbb{Z} "]
+},
+"LaTeX - mathbb{Q} (alias)": {
+	"prefix": "Q",
+	"body": ["\\mathbb{Q} "]
+},
+"LaTeX - mathbb{N} (alias)": {
+	"prefix": "N",
+	"body": ["\\mathbb{N} "]
+},
+"LaTeX - mathbb{C} (alias)": {
+	"prefix": "C",
+	"body": ["\\mathbb{C} "]
+},
+"LaTeX - mathbb{K} (alias)": {
+	"prefix": "K",
+	"body": ["\\mathbb{K} "]
+},
+"LaTeX - mathbb{M} (alias)": {
+	"prefix": "M",
+	"body": ["\\mathbb{M} "]
+},
+"LaTeX - mathbb{S} (alias)": {
+	"prefix": "S",
+	"body": ["\\mathbb{S} "]
+},
+"LaTeX - mathcal{F} (alias)": {
+	"prefix": "F",
+	"body": ["\\mathcal{F} "]
+},
+"LaTeX - mathcal{B} (alias)": {
+	"prefix": "B",
+	"body": ["\\mathcal{B}($0) "]
+},
+
+// --------------------------------------
+// **Math Symbols Greek Letters**
+// --------------------------------------
+
+"LaTeX - alpha": {
+	"prefix": "alpha",
+	"body": ["\\alpha "]
+},
+"LaTeX - beta": {
+	"prefix": "beta",
+	"body": ["\\beta "]
+},
+"LaTeX - gamma": {
+	"prefix": "gamma",
+	"body": ["\\gamma "]
+},
+"LaTeX - Gamma": {
+	"prefix": "Gamma",
+	"body": ["\\Gamma "]
+},
+
+"LaTeX - delta": {
+	"prefix": "delta",
+	"body": ["\\delta "]
+},
+"LaTeX - Delta": {
+	"prefix": "Delta",
+	"body": ["\\Delta "]
+},
+"LaTeX - epsilon": {
+	"prefix": "epsilon",
+	"body": ["\\epsilon "]
+},
+"LaTeX - varepsilon": {
+	"prefix": "ve",
+	"body": ["\\varepsilon "]
+},
+"LaTeX - zeta": {
+	"prefix": "zeta",
+	"body": ["\\zeta "]
+},
+"LaTeX - eta": {
+	"prefix": "eta",
+	"body": ["\\eta "]
+},
+"LaTeX - theta": {
+	"prefix": "theta",
+	"body": ["\\theta "]
+},
+"LaTeX - Theta": {
+	"prefix": "Theta",
+	"body": ["\\Theta "]
+},
+"LaTeX - vartheta": {
+	"prefix": "vtheta",
+	"body": ["\\vartheta "]
+},
+"LaTeX - iota": {
+	"prefix": "iota",
+	"body": ["\\iota "]
+},
+"LaTeX - kappa": {
+	"prefix": "kappa",
+	"body": ["\\kappa "]
+},
+"LaTeX - lambda": {
+	"prefix": "lambda",
+	"body": ["\\lambda "]
+},
+"LaTeX - Lambda": {
+	"prefix": "Lambda",
+	"body": ["\\Lambda "]
+},
+"LaTeX - mu": {
+	"prefix": "mu",
+	"body": ["\\mu "]
+},
+"LaTeX - nu": {
+	"prefix": "nu",
+	"body": ["\\nu "]
+},
+"LaTeX - xi": {
+	"prefix": "xi",
+	"body": ["\\xi "]
+},
+"LaTeX - Xi": {
+	"prefix": "Xi",
+	"body": ["\\Xi "]
+},
+"LaTeX - pi": {
+	"prefix": "pi",
+	"body": ["\\pi "]
+},
+"LaTeX - Pi": {
+	"prefix": "Pi",
+	"body": ["\\Pi "]
+},
+"LaTeX - varpi": {
+	"prefix": "varpi",
+	"body": ["\\vpi "]
+},
+"LaTeX - rho": {
+	"prefix": "rho",
+	"body": ["\\rho "]
+},
+"LaTeX - varrho": {
+	"prefix": "varrho",
+	"body": ["\\vrho "]
+},
+"LaTeX - sigma": {
+	"prefix": "sigma",
+	"body": ["\\sigma "]
+},
+"LaTeX - Sigma": {
+	"prefix": "Sigma",
+	"body": ["\\Sigma "]
+},
+"LaTeX - varsigma": {
+	"prefix": "vsigma",
+	"body": ["\\varsigma "]
+},
+"LaTeX - tau": {
+	"prefix": "tau",
+	"body": ["\\tau "]
+},
+"LaTeX - upsilon": {
+	"prefix": "upsilon",
+	"body": ["\\upsilon "]
+},
+"LaTeX - Upsilon": {
+	"prefix": "Upsilon",
+	"body": ["\\Upsilon "]
+},
+"LaTeX - phi": {
+	"prefix": "phi",
+	"body": ["\\phi "]
+},
+"LaTeX - Phi": {
+	"prefix": "Phi",
+	"body": ["\\Phi "]
+},
+"LaTeX - varphi": {
+	"prefix": "varphi",
+	"body": ["\\varphi "]
+},
+"LaTeX - chi": {
+	"prefix": "chi",
+	"body": ["\\chi "]
+},
+"LaTeX - psi": {
+	"prefix": "psi",
+	"body": ["\\psi "]
+},
+"LaTeX - Psi": {
+	"prefix": "Psi",
+	"body": ["\\Psi "]
+},
+"LaTeX - omega": {
+	"prefix": "omega",
+	"body": ["\\omega "]
+},
+"LaTeX - Omega": {
+	"prefix": "Omega",
+	"body": ["\\Omega "]
+},
+"LaTeX - digamma": {
+	"prefix": "digamma",
+	"body": ["\\digamma "]
+},
+"LaTeX - aleph": {
+	"prefix": "aleph",
+	"body": ["\\aleph "]
+},
+"LaTeX - beth": {
+	"prefix": "beth",
+	"body": ["\\beth "]
+},
+"LaTeX - gimel": {
+	"prefix": "gimel",
+	"body": ["\\gimel "]
+},
+"LaTeX - daleth": {
+	"prefix": "daleth",
+	"body": ["\\daleth "]
+},
+
+// --------------------------------------
+// **Math Texts**
+// --------------------------------------
+
+"LaTeX - mathrm": {	
+	"prefix": "rm",	
+	"body": ["\\mathrm{$1} $0"]
+},
+"LaTeX - mathsf": {	
+	"prefix": "sf",	
+	"body": ["\\mathsf{$1} $0"]
+},
+"LaTeX - mathbf": {	
+	"prefix": "bf",	
+	"body": ["\\mathbf{$1} $0"]
+},
+"LaTeX - mathbb": {
+	"prefix": "bb",
+	"body": ["\\mathbb{$1}$0"]
+},
+"LaTeX - mathit": {
+	"prefix": "it",
+	"body": ["\\mathit{$1}$0"]
+},
+"LaTeX - mathtt": {
+	"prefix": "tt",
+	"body": ["\\mathtt{$1}$0"]
+},
+"LaTeX - mathcal": {
+	"prefix": "ca",
+	"body": ["\\mathcal{$1}$0"]
+},
+"LaTeX - mathfrak": {
+	"prefix": "frak",
+	"body": ["\\mathfrak{$1}$0"]
+},
+"LaTeX - mathscr": {
+	"prefix": "scr",
+	"body": ["\\mathscr{$1}$0"]
+},
+"LaTeX - inline math (dollars)": {
+	"prefix": "i",	
+	"body": ["$$1$ $0"],
+	"description": "Create inline math formula"
+},
+"LaTeX - display math (dollars)": {
+	"prefix": "dd", 
+	"body": ["$$ $1 $$$0"],
+	"description": "Create display math formula"
+},
+"LaTeX - inline math with display style (dollars)": {	
+	"prefix": "id",	
+	"body": ["$\\displaystyle $1$ $0"],
+	"description": "Create inline math formula with display style"
+},
+"LaTeX - display math (brackets)": {
+	"prefix": "DD", 
+	"body": ["\\[$1\\]$0"],
+	"description": "Create display math formula"
+},
+
+// --------------------------------------
+// **Math Brackets**
+// --------------------------------------				    
+
+"dots": {
+	"prefix": "...",
+	"body": ["\\dots"],
+	"description": "dots"
+},
+"ldots": {
+	"prefix": "l..",
+	"body": ["\\ldots"],
+	"description": "ldots"
+},
+"cdots": {
+	"prefix": "c..",
+	"body": ["\\cdots"],
+	"description": "cdots"
+},
+"vdots": {
+	"prefix": "v..",
+	"body": ["\\vdots"],
+	"description": "vdots"
+},
+"ddots": {
+	"prefix": "d..",
+	"body": ["\\ddots"],
+	"description": "ddots"
+},
+"LaTeX - left": {
+	"prefix": "lf",
+	"body": ["\\left"]
+},
+"LaTeX - right": {
+	"prefix": "rt",
+	"body": ["\\right"]
+},
+"LaTeX - langle": {
+	"prefix": "la",
+	"body": ["\\langle "]
+},
+"LaTeX - rangle": {
+	"prefix": "ra",
+	"body": ["\\rangle "]
+},
+"LaTeX - lfloor": {
+	"prefix": "lfl",
+	"body": ["\\lfloor "]
+},
+"LaTeX - rfloor": {
+	"prefix": "rfl",
+	"body": ["\\rfloor "]
+},
+"LaTeX - lceil": {
+	"prefix": "lce",
+	"body": ["\\lceil "]
+},
+"LaTeX - rceil": {
+	"prefix": "rce",
+	"body": ["\\rceil "]
+},
+"LaTeX - ulcorner": {
+	"prefix": "ulcor",
+	"body": ["\\ulcorner "]
+},
+"LaTeX - urcorner": {
+	"prefix": "urcor",
+	"body": ["\\urcorner "]
+},
+"LaTeX - llcorner": {
+	"prefix": "llcor",
+	"body": ["\\llcorner "]
+},
+"LaTeX - lrcorner": {
+	"prefix": "lrcor",
+	"body": ["\\lrcorner "]
+},
+"LaTeX - lparenthesis + rparenthesis": {
+	"prefix": "pa",
+	"body": ["\\left( $1 \\right) $0"]
+},
+"LaTeX - lbracket + rbracket": {
+	"prefix": "m",
+	"body": ["\\left[ $1 \\right] $0"]
+},
+"LaTeX - lcurlybracket + rcurlybracket": {
+	"prefix": "cur",
+	"body": ["\\left\\{ $1 \\right\\\\} $0"]
+},
+"LaTeX - langle + rangle": {
+	"prefix": "a",
+	"body": ["\\left\\langle $1 \\right\\rangle $0"]
+},		
+"LaTeX - lfloor + rfloor": {
+	"prefix": "lrfl",
+	"body": ["\\left\\lfloor $1 \\right\\rfloor $0"]
+},
+"LaTeX - lceil + rceil": {
+	"prefix": "lrce",
+	"body": ["\\left\\lceil $1 \\right\\rceil $0"]
+},		
+"LaTeX - quad": {
+	"prefix": "qu",
+	"body": ["\\quad $0"]
+},
+"LaTeX - abs": {
+	"prefix": "ab",
+	"body": ["\\left\\lvert $1 \\right\\rvert $0"]
+},
+"LaTeX - norm": {
+	"prefix": "no",
+	"body": ["\\left\\lVert $1 \\right\\rVert $0"]
+},
+"LaTeX - inner product": {
+	"prefix": "inn",
+	"body": ["\\left\\langle $1,$2 \\right\\rangle $0"]
+},
+
+// --------------------------------------
+// **Math Arrows**
+// --------------------------------------
+				
+"LaTeX - to": {
+	"prefix": "to",
+	"body": ["\\to "]
+},
+"LaTeX - leadsto": {
+	"prefix": "leadsto",
+	"body": ["\\leadsto "]
+},
+"LaTeX - mapsto": {
+	"prefix": "mpt",
+	"body": ["\\mapsto "]
+},
+"LaTeX - longmapsto": {
+	"prefix": "longmpt",
+	"body": ["\\longmapsto "]
+},
+"LaTeX - weakly conv to": {
+	"prefix": "wc",
+	"body": ["\\stackrel{\\mathrm{w}}{\\to} "]
+},
+"LaTeX - weakly star conv to": {
+	"prefix": "wsc",
+	"body": ["\\stackrel{\\mathrm{w}^*}{\\to} "]
+},
+"LaTeX - iff": {
+	"prefix": "if",
+	"body": ["\\iff "]
+},
+"LaTeX - implies": {
+	"prefix": "im",
+	"body": ["\\implies "]
+},
+"LaTeX - gets": {
+	"prefix": "gets",
+	"body": ["\\gets "]
+},
+"LaTeX - leftarrow": {
+	"prefix": "lfa",
+	"body": ["\\leftarrow "]
+},
+"LaTeX - rightarrow": {
+	"prefix": "rta",
+	"body": ["\\rightarrow "]
+},
+"LaTeX - nleftarrow": {
+	"prefix": "nlfa",
+	"body": ["\\nleftarrow "]
+},
+"LaTeX - nrightarrow": {
+	"prefix": "nrta",
+	"body": ["\\nrightarrow "]
+},
+"LaTeX - longleftarrow": {
+	"prefix": "llfa",
+	"body": ["\\longleftarrow "]
+},
+"LaTeX - longrightarrow": {
+	"prefix": "lrta",
+	"body": ["\\longrightarrow "]
+},
+"tend to": {
+	"prefix": "tend",
+	"body": ["\\stackrel{$1}{\\longrightarrow}"],
+	"description": "tend to"
+},
+"weakly tend to": {
+	"prefix": "wct",
+	"body": ["\\stackrel{$1}{\\rightharpoonup }"],
+	"description": "weakly tend to"
+},
+"LaTeX - Leftarrow": {
+	"prefix": "Lfa",
+	"body": ["\\Leftarrow "]
+},
+"LaTeX - Rightarrow": {
+	"prefix": "Rta",
+	"body": ["\\Rightarrow "]
+},
+"LaTeX - nLeftarrow": {
+	"prefix": "nLfa",
+	"body": ["\\nLeftarrow "]
+},
+"LaTeX - nRightarrow": {
+	"prefix": "nRta",
+	"body": ["\\nRightarrow "]
+},
+"LaTeX - Longleftarrow": {
+	"prefix": "Longlfa",
+	"body": ["\\Longleftarrow "]
+},
+"LaTeX - Longrightarrow": {
+	"prefix": "Longrta",
+	"body": ["\\Longrightarrow "]
+},
+"LaTeX - leftrightarrow": {
+	"prefix": "lra",
+	"body": ["\\leftrightarrow "]
+},
+"LaTeX - Leftrightarrow": {
+	"prefix": "LRa",
+	"body": ["\\Leftrightarrow "]
+},
+"LaTeX - longleftrightarrow": {
+	"prefix": "longlra",
+	"body": ["\\longleftrightarrow "]
+},
+"LaTeX - Longleftrightarrow": {
+	"prefix": "Longlra",
+	"body": ["\\Longleftrightarrow "]
+},
+"LaTeX - downarrow": {
+	"prefix": "da",
+	"body": ["\\downarrow "]
+},
+"LaTeX - Downarrow": {
+	"prefix": "Da",
+	"body": ["\\Downarrow "]
+},
+"LaTeX - uparrow": {
+	"prefix": "ua",
+	"body": ["\\uparrow "]
+},
+"LaTeX - Uparrow": {
+	"prefix": "Ua",
+	"body": ["\\Uparrow "]
+},
+"LaTeX - updownarrow": {
+	"prefix": "uda",
+	"body": ["\\updownarrow "]
+},
+"LaTeX - Updownarrow": {
+	"prefix": "UDa",
+	"body": ["\\Updownarrow "]
+},
+"LaTeX - hookleftarrow": {
+	"prefix": "hklfa",
+	"body": ["\\hookleftarrow "]
+},
+"LaTeX - hookrightarrow": {
+	"prefix": "hkrta",
+	"body": ["\\hookrightarrow "]
+},
+"LaTeX - leftharpoonup": {
+	"prefix": "lfhpu",
+	"body": ["\\leftharpoonup "]
+},
+"LaTeX - rightharpoonup": {
+	"prefix": "rthpu",
+	"body": ["\\rightharpoonup "]
+},
+"LaTeX - leftharpoondown": {
+	"prefix": "lfhpd",
+	"body": ["\\leftharpoondown "]
+},
+"LaTeX - rightharpoondown": {
+	"prefix": "rthpd",
+	"body": ["\\rightharpoondown "]
+},
+"LaTeX - rightleftharpoons": {
+	"prefix": "lrhp",
+	"body": ["\\rightleftharpoons "]
+},
+"LaTeX - nearrow": {
+	"prefix": "nea",
+	"body": ["\\nearrow "]
+},
+"LaTeX - searrow": {
+	"prefix": "sea",
+	"body": ["\\searrow "]
+},
+"LaTeX - nwarrow": {
+	"prefix": "nwa",
+	"body": ["\\nwarrow "]
+},
+"LaTeX - swarrow": {
+	"prefix": "swa",
+	"body": ["\\swarrow "]
+},
+"LaTeX - overrightarrow": {
+	"prefix": "orta",
+	"body": ["\\overrightarrow{$1}$0"]
+},
+"LaTeX - underrightarrow": {
+	"prefix": "urta",
+	"body": ["\\underrightarrow{$1}$0"]
+},
+"LaTeX - overleftarrow": {
+	"prefix": "olfa",
+	"body": ["\\overleftarrow{$1}$0"]
+},
+"LaTeX - underleftarrow": {
+	"prefix": "ulfa",
+	"body": ["\\underleftarrow{$1}$0"]
+},
+"LaTeX - overleftrightarrow": {
+	"prefix": "olra",
+	"body": ["\\overleftrightarrow{$1}$0"]
+},
+"LaTeX - underleftrightarrow": {
+	"prefix": "ulra",
+	"body": ["\\underleftrightarrow{$1}$0"]
+}, 
+
+// --------------------------------------
+// **Shortcuts and Common Structures**
+// --------------------------------------
+
+"LaTeX - frac": {
+	"prefix": "frac",
+	"body": ["\\frac{$1}{$2} $0"]},
+	"LaTeX - dfrac": {
+	"prefix": "dfrac",
+	"body": ["\\dfrac{$1}{$2} $0"]
+},
+"LaTeX - tfrac": {
+	"prefix": "tfrac",
+	"body": ["\\dfrac{$1}{$2} $0"]
+},
+"LaTeX - sqrt": {
+	"prefix": "sqrt",
+	"body": ["\\sqrt{$1} $0"]
+},
+"LaTeX - Derivative": {
+    "prefix": "deriv",
+    "body": ["\\frac{d${1:y}}{d${2:x}}$0"],
+    "description": "Derivative"
+},
+"LaTeX - Partial Derivative": {
+    "prefix": "pderiv",
+    "body": ["\\frac{\\partial ${1:f}}{\\partial ${2:x}}$0"],
+    "description": "Partial derivative"
+},
+"LaTeX - Vector Bold": {
+    "prefix": "vbf",
+    "body": ["\\mathbf{${1:v}}$0"],
+    "description": "Bold vector notation"
+},
+"LaTeX - Evaluate at": {
+    "prefix": "eval",
+    "body": ["\\bigg|_{${1:a}}^{${2:b}}$0"],
+    "description": "Evaluation from a to b"
+},
+				
+				
+
+					"LaTeX - less": {
+						"prefix": "less",
+						"body": ["\\textless "]
+					},
+					"LaTeX - nless": {
+						"prefix": "nless",
+						"body": ["\\nless "]
+					},
+					"LaTeX - nleq": {
+						"prefix": "nleq",
+						"body": ["\\nleq "]
+					},
+					"LaTeX - gtr": {
+						"prefix": "gtr",
+						"body": ["\\textgreater "]
+					},
+					"LaTeX - ngtr": {
+						"prefix": "ngtr",
+						"body": ["\\ngtr "]
+					},
+					"LaTeX - ngeq": {
+						"prefix": "ngeq",
+						"body": ["\\ngeq "]
+					},
+					"LaTeX - approx": {
+						"prefix": "approx",
+						"body": ["\\approx "]
+					},
+					"LaTeX - asymp": {
+						"prefix": "asymp",
+						"body": ["\\asymp "]
+					},
+					"LaTeX - prec": {
+						"prefix": "prec",
+						"body": ["\\prec "]
+					},
+					"LaTeX - nprec": {
+						"prefix": "nprec",
+						"body": ["\\nprec "]
+					},
+					"LaTeX - preceq": {
+						"prefix": "preceq",
+						"body": ["\\preceq "]
+					},
+					"LaTeX - npreceq": {
+						"prefix": "npreceq",
+						"body": ["\\npreceq "]
+					},
+					"LaTeX - succ": {
+						"prefix": "succ",
+						"body": ["\\succ "]
+					},
+					"LaTeX - nsucc": {
+						"prefix": "nsucc",
+						"body": ["\\nsucc "]
+					},
+					"LaTeX - succeq": {
+						"prefix": "succeq",
+						"body": ["\\succeq "]
+					},
+					"LaTeX - nsucceq": {
+						"prefix": "nsucceq",
+						"body": ["\\nsucceq "]
+					},
+					"LaTeX - propto": {
+						"prefix": "propto",
+						"body": ["\\propto "]
+					},
+					"LaTeX - doteq": {
+						"prefix": "doteq",
+						"body": ["\\doteq "]
+					},
+					"LaTeX-triangle": {
+						"prefix": "tra",
+						"body": ["\\triangle "]
+					},
+"LaTeX - triangle": {
+	"prefix": "lap",
+	"body": ["\\mathop{{}\\bigtriangleup}\\nolimits $1"]
+},
+					"LaTeX - triangleright": {
+						"prefix": "traright",
+						"body": ["\\triangleright "]
+					},
+					"LaTeX - triangleleft": {
+						"prefix": "traleft",
+						"body": ["\\triangleleft "]
+					},
+					"LaTeX - angle": {
+						"prefix": "ang",
+						"body": ["\\angle "]
+					},
+					"LaTeX - measuredangle": {
+						"prefix": "meaang",
+						"body": ["\\measuredangle "]
+					},
+					"LaTeX - ell": {
+						"prefix": "ell",
+						"body": ["\\ell "]
+					},
+					"LaTeX - parallel": {
+						"prefix": "parallel",
+						"body": ["\\parallel "]
+					},
+					"LaTeX - nparallel": {
+						"prefix": "nparallel",
+						"body": ["\\nparallel "]
+					},
+					"LaTeX - bowtie": {
+						"prefix": "bowtie",
+						"body": ["\\bowtie "]
+					},
+					"LaTeX - perp": {
+						"prefix": "perp",
+						"body": ["\\perp "]
+					},
+					"LaTeX - notperp": {
+						"prefix": "nperp",
+						"body": ["\\not\\perp "]
+					},
+					"LaTeX - smile": {
+						"prefix": "smile",
+						"body": ["\\smile "]
+					},
+					"LaTeX - frown": {
+						"prefix": "frown",
+						"body": ["\\frown "]
+					},
+					"LaTeX - circ": {
+						"prefix": "circ",
+						"body": ["\\circ "]
+					},
+					"LaTeX - cong": {
+						"prefix": "cong",
+						"body": ["\\cong "]
+					},
+					"LaTeX - ncong": {
+						"prefix": "ncong",
+						"body": ["\\ncong "]
+					},
+					"LaTeX - sim": {
+						"prefix": "sim",
+						"body": ["\\sim "]
+					},
+					"LaTeX - simeq": {
+						"prefix": "simeq",
+						"body": ["\\simeq "]
+					},
+					"LaTeX - nsim": {
+						"prefix": "nsim",
+						"body": ["\\nsim "]	
+					},
+					"LaTeX - nsimeq": {
+						"prefix": "nsimeq",
+						"body": ["\\not\\simeq "]
+					},
+					"LaTeX - bullet": {
+						"prefix": "bullet",
+						"body": ["\\bullet "]
+					},
+					"LaTeX - diamond": {
+						"prefix": "diamond",
+						"body": ["\\diamond "]
+					},
+					"LaTeX - uplus": {
+						"prefix": "uplus",
+						"body": ["\\uplus "]
+					},
+					"LaTeX - oplus": {
+						"prefix": "oplus",
+						"body": ["\\oplus "]
+					},
+					"LaTeX - ominus": {
+						"prefix": "ominus",
+						"body": ["\\ominus "]
+					},
+					"LaTeX - odot": {
+						"prefix": "odot",
+						"body": ["\\odot "]
+					},
+					"LaTeX - otimes": {
+						"prefix": "otimes",
+						"body": ["\\otimes "]
+					},
+					"LaTeX - oslash": {
+						"prefix": "oslash",
+						"body": ["\\oslash "]
+					},
+					"LaTeX - upharpoonright": {
+						"prefix": "upharpoonright",
+						"body": ["\\upharpoonright "]
+					},
+					"LaTeX - cdot": {
+						"prefix": "cdot",
+						"body": ["\\cdot "]
+					},
+					"LaTeX - cdots": {
+						"prefix": "cdots",
+						"body": ["\\cdots "]
+					},
+					"LaTeX - ldots": {
+						"prefix": "ldots",
+						"body": ["\\ldots "]
+					},
+					"LaTeX - vdots": {
+						"prefix": "vdots",
+						"body": ["\\vdots "]
+					},
+					"LaTeX - ddots": {
+						"prefix": "ddots",
+						"body": ["\\ddots "]
+					},
+					"LaTeX - pm": {
+						"prefix": "pm",
+						"body": ["\\pm "]
+					},
+					"LaTeX - mp": {
+						"prefix": "mp",
+						"body": ["\\mp "]
+					},
+					"LaTeX - times": {
+						"prefix": "times",
+						"body": ["\\times "]
+					},
+					"LaTeX - div": {
+						"prefix": "div",
+						"body": ["\\div "]
+					},
+					"LaTeX - ast": {
+						"prefix": "ast",
+						"body": ["\\ast "]
+					},
+					"LaTeX - mid": {
+						"prefix": "mid",
+						"body": ["\\mid "]
+					},
+					"LaTeX - nmid": {
+						"prefix": "nmid",
+						"body": ["\\nmid "]
+					},
+"LaTeX - partial": {
+	"prefix": "par",
+	"body": ["\\partial "]
+},
+					"LaTeX - nabla": {
+						"prefix": "nabla",
+						"body": ["\\nabla "]
+					},
+					"LaTeX - hbar": {
+						"prefix": "hbar",
+						"body": ["\\hbar "]
+					},
+					"LaTeX - star": {
+						"prefix": "star",
+						"body": ["\\star "]
+					},
+					"LaTeX - surd": {
+						"prefix": "surd",
+						"body": ["\\surd "]
+					},
+					"LaTeX - checkmark": {
+						"prefix": "checkmark",
+						"body": ["\\checkmark "]
+					},
+					"LaTeX - bigcirc": {
+						"prefix": "bcirc",
+						"body": ["\\bigcirc "]
+					},
+					"LaTeX - amalg": {
+						"prefix": "amalg",
+						"body": ["\\amalg "]
+					},
+					"LaTeX - bigtriangleup": {
+						"prefix": "btrau",
+						"body": ["\\bigtriangleup "]
+					},
+					"LaTeX - bigtriangledown": {
+						"prefix": "btrad",
+						"body": ["\\bigtriangledown "]
+					},
+					"LaTeX - dagger": {
+						"prefix": "dag",
+						"body": ["\\dagger "]
+					},
+					"LaTeX - ddagger": {
+						"prefix": "ddag",
+						"body": ["\\ddagger "]
+					},
+					"LaTeX - wr": {
+						"prefix": "wr",
+						"body": ["\\wr "]
+					},
+					"LaTeX - wp": {
+						"prefix": "wp",
+						"body": ["\\wp "]
+					},
+"LaTeX - Re": {
+	"prefix": "Re",
+	"body": ["\\Re "]
+},
+"LaTeX - Im": {
+	"prefix": "Im",
+	"body": ["\\Im "]
+},
+					"LaTeX - imath": {
+						"prefix": "ima",
+						"body": ["\\imath "]
+					},
+					"LaTeX - jmath": {
+						"prefix": "jma",
+						"body": ["\\jmath "]
+					},
+					"LaTeX - eth": {
+						"prefix": "eth",
+						"body": ["\\eth "]
+					},
+"inverse": {
+	"prefix": "inv",
+	"body": ["^{-1}"],
+	"description": "inverse"
+},
+"prime": {
+	"prefix": "p",
+	"body": ["^{\\prime} $0"],
+	"description": "prime"
+},
+"double prime": {
+	"prefix": "pp",
+	"body": ["^{\\prime \\prime} $0"],
+	"description": "double prime"
+},  
+					"LaTeX - Box": {
+						"prefix": "Box",
+						"body": ["\\Box "]
+					},
+					"LaTeX - bot": {
+						"prefix": "bot",
+						"body": ["\\bot "]
+					},
+					"LaTeX - top": {
+						"prefix": "top",
+						"body": ["\\top "]
+					},
+				
+				
+					"LaTeX - ss": {
+						"prefix": "ss",
+						"body": ["\\sum\\limits_{$1}^{$2}$0"]
+					},
+					"LaTeX - pd": {
+						"prefix": "pd",
+						"body": ["\\prod\\limits_{$1}^{$2}$0"]
+					},
+					"LaTeX - dif": {
+						"prefix": "dif",
+						"body": ["\\mathop{}\\!\\mathrm{d}"]
+					},
+					"integral": {
+                        "prefix": "int",
+                        "body": ["\\int "],
+                        "description": "integral"
+                    },
+					"integral1": {
+                         "prefix": "int1",
+                         "body": ["\\mathop{\\mathlarger{\\int_{$1}}}$2"],
+                         "description": "integral"
+                    },
+                    "integral2": {
+                         "prefix": "int2",
+                         "body": ["\\mathop{\\mathlarger{\\mathlarger{\\int_{$1}}}}$2"],
+                         "description": "integral"
+                    },
+                    "integral3": {
+                         "prefix": "int3",
+                         "body": ["\\mathop{\\mathlarger{\\mathlarger{\\mathlarger{\\int_{$1}}}}}$2"],
+                         "description": "integral"
+                    },
+					"integral4": {
+                         "prefix": "int4",
+                         "body": ["\\mathop{\\mathlarger{\\mathlarger{\\mathlarger{\\mathlarger{\\int_{$1}}}}}}$2"],
+                         "description": "integral"
+                    },
+                    "LaTeX - fint": {
+	                    "prefix": "fint",
+	                    "body": ["\\fint_{$1}$0"]
+                    },
+					"LaTeX - iint": {
+						"prefix": "iint",
+						"body": ["\\iint_{$1}^{$2}$0"]
+					},
+					"LaTeX - iiint": {
+						"prefix": "iiint",
+						"body": ["\\iiint_{$1}^{$2}$0"]
+					},
+					"LaTeX - oint": {
+						"prefix": "oint",
+						"body": ["\\oint_{$1}^{$2}$0"]
+					},
+					"LaTeX - bigcup": {
+						"prefix": "bcup",
+						"body": ["\\bigcup\\limits_{$1}^{$2}\\,$3"]
+					},
+					"LaTeX - bigcap": {
+						"prefix": "bcap",
+						"body": ["\\bigcap\\limits_{$1}^{$2}\\,$3"]
+					},
+					"LaTeX - bigvee": {
+						"prefix": "bvee",
+						"body": ["\\bigvee\\limits_{$1}^{$2}\\,$3"]
+					},
+					"LaTeX - bigwedge": {
+						"prefix": "bwe",
+						"body": ["\\bigwedge\\limits_{$1}^{$2}\\,$3"]
+					},
+					"LaTeX - coprod": {
+						"prefix": "copd",
+						"body": ["\\coprod\\limits_{$1}^{$2}\\,$3"]
+					},
+					"LaTeX - biguplus": {
+						"prefix": "bup",
+						"body": ["\\biguplus\\limits_{$1}^{$2}\\,$3"]
+					},
+					"LaTeX - bigodot": {
+						"prefix": "bod",
+						"body": ["\\bigodot\\limits_{$1}^{$2}\\,$3"]
+					},
+					"LaTeX - bigoplus": {
+						"prefix": "bop",
+						"body": ["\\bigoplus\\limits_{$1}^{$2}\\,$3"]
+					},
+					"LaTeX - bigotimes": {
+						"prefix": "bot",
+						"body": ["\\bigotimes\\limits_{$1}^{$2}\\,$3"]
+					}, 
+					
+// --------------------------------------
+// **Environment Commands**
+// --------------------------------------
+
+"begin": {
+	"prefix": "beg",
+	"body": [
+		"\\begin{${1|definition,thm,nthm,lemma,nlemma,prop,nprop,cor,ncor,claim,proof,ppt,rmk,eg,axiom,notation,assumption,conjecture,fact,question,ex,solution|}}","\t$2","\\end{$1} $0",
+	],
+	"description": "begin"
+},
+"itemize": {
+	"prefix": "bit",
+	"body": [
+		"\\begin{itemize}",
+		"    \\item $1 \frac{}{} ",
+		"    \\item   ",
+		"    \\end{itemize} "
+	],
+	"description": "itemize"
+},
+"enumerate": {
+	"prefix": "ben",
+	"body": [
+		"\\begin{enumerate}",
+		"    \\item $1  ",
+		"    \\item   ",
+		"    \\end{enumerate} "
+	],
+	"description": "enumerate"
+},
+"None": {
+    "prefix": "beni",
+    "body": [
+        "\\begin{enumerate}[label=(\\roman*)]",
+        "\\item $1   ",
+        "\\item ",
+        "\\end{enumerate}"
+    ],
+    "description": "None"
+},
+"enumeratea": {
+	"prefix": "bena",
+	"body": [
+		"\\begin{enumerate}[(a)]",
+		"    \\item $1  ",
+		"    \\item   ",
+		"    \\end{enumerate} "
+	],
+	"description": "enumerate"
+},
+"begsplit": {
+	"prefix": "besp",
+	"body": [
+		"\\begin{equation}",
+		"\\begin{split}",
+		"   $1  & = $2\\\\\\",
+		"       & = $3\\\\\\",
+		"       & = $4",
+		"\\end{split}",
+		" \\end{equation} ",
+		""
+	],
+	"description": "besplit"
+},
+"besplit": {
+	"prefix": "bsesp",
+	"body": [
+		"\\begin{equation*}",
+		"\\begin{split}",
+		"   $1  & = $2\\\\\\",
+		"       & = $3\\\\\\",
+		"       & = $4",
+		"\\end{split}",
+		" \\end{equation*} ",
+		""
+    ],
+    "description": "besplit"
+},
+"beg": {
+    "prefix": "bcas",
+    "body": ["\\begin{cases}\n$1 & $2 \\text{$3}\\\\\\ \n$4 &$5 \\text{$6} \n\\end{cases} $0",]
+},
+"be": {
+	"prefix": "beq",
+	"body": ["\\begin{equation}\n$1\n \\end{equation} $0",]
+},
+"bse": {
+	"prefix": "bseq",
+    "body": ["\\begin{equation*}\n$1\n \\end{equation*} $0",]
+},
+"bal": {
+	"prefix": "bal",
+	"body": ["\\begin{align}\n$1\n \\end{align} $0",]
+},
+"bsal": {
+	"prefix": "bsal",
+	"body": ["\\begin{align*}\n$1\n \\end{align*} $0",]
+},
+"bga": {
+	"prefix": "bga",
+	"body": ["\\begin{gather}\n$1\n \\end{gather} $0",]
+},
+"bsga": {
+	"prefix": "bsga",
+	"body": ["\\begin{gather*}\n$1\n \\end{gather*} $0",]
+},	
+"bml": {
+	"prefix": "bml",
+	"body": ["\\begin{multiline}\n$1\n \\end{multiline} $0",]
+},
+"bsml": {
+	"prefix": "bsml",
+	"body": ["\\begin{multiline*}\n$1\n \\end{multiline*} $0",]
+},		
+"matrix": {
+	"prefix": "bm",
+	"body": [
+		"\\begin{matrix}",
+		" & \\\\\\",
+		" &",
+		"\\end{matrix}"
+	],
+	"description": "matrix"
+},
+"pmatrix": {
+	"prefix": "bpm",
+	"body": [
+		"\\begin{pmatrix}",
+		" & \\\\\\",
+		" &",
+		"\\end{pmatrix}"
+	],
+	"description": "pmatrix"
+},
+"bmatrix": {
+	"prefix": "bbm",
+	"body": [
+		"\\begin{bmatrix}",
+		" & \\\\\\",
+		" &",
+		"\\end{bmatrix}"
+	],
+	"description": "bmatrix"
+},
+"Bmatrix": {
+	"prefix": "bBm",
+	"body": [
+	"\\begin{Bmatrix}",
+	" & \\\\\\",
+	" &",
+	"\\end{Bmatrix}"
+	],
+	"description": "Bmatrix"
+},
+"vmatrix": {
+	"prefix": "bvm",
+	"body": [
+		"\\begin{vmatrix}",
+		" & \\\\\\",
+		" &",
+		"\\end{vmatrix}"
+	],
+	"description": "vmatrix"
+},
+"Vmatrix": {
+	"prefix": "bVm",
+	"body": [
+		"\\begin{Vmatrix}",
+		" & \\\\\\",
+		" &",
+		"\\end{Vmatrix}"
+	],
+	"description": "Vmatrix"
+},
+
+// --------------------------------------
+// **Formatting Commands**
+// --------------------------------------
+
+"LaTeX - text": {
+	"prefix": "text",
+	"body": ["\\text{$1}$0"]
+	},
+"LaTeX - textnormal": {
+	"prefix": "tno",
+	"body": ["\\textnormal{$1}$0"]
+},
+"LaTeX - textrm": {
+	"prefix": "trm",
+	"body": ["\\textrm{$1}$0"]
+},
+"LaTeX - emph": {
+    "prefix": "tem",
+    "body": ["\\emph{$1}$0"]
+},
+"LaTeX - textsf": {
+	"prefix": "tsf",
+	"body": ["\\textsf{$1}$0"]
+},
+"LaTeX - texttt": {
+    "prefix": "ttt",
+    "body": ["\\texttt{$1}$0"]
+},
+"LaTeX - textit": {
+    "prefix": "tit",
+    "body": ["\\textit{$1}$0"]
+},
+"LaTeX - textsl": {
+	"prefix": "tsl",
+	"body": ["\\textsl{$1}$0"]
+},
+"LaTeX - textsc": {
+    "prefix": "tsc",
+    "body": ["\\textsc{$1}$0"]
+},
+"LaTeX - textbf": {
+	"prefix": "tbf",
+	"body": ["\\textbf{$1}$0"]
+},
+"LaTeX - mbox": {
+	"prefix": "mbox",
+	"body": ["\\mbox{$1}$0"]
+},
+"LaTeX - operatorname": {
+	"prefix": "ope",
+	"body": ["\\operatorname{$1}$0"]
+},
+"LaTeX - displaystyle ": {
+	"prefix": "displaystyle ",
+	"body": ["\\displaystyle "]
+},
+"LaTeX - textbackslash ": {
+	"prefix": "textbackslash ",
+	"body": ["\\textbackslash "]
+},
+"LaTeX - Strikeout Text": {
+    "prefix": "st",
+    "body": ["\\st{$1}$0"],
+    "description": "Strike through text (requires ulem package)"
+},
+"test function space": {
+	"prefix": "test",
+	"body": ["\\mathcal{C}_{c}^{\\infty}($1) $0"],
+	"description": "test function space"
+},
+
+				}
+		
